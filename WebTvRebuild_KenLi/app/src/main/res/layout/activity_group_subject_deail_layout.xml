@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:id="@+id/activity_group_subject_detail_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/grey_group_bg" >
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/title_layout_for_group" />
+
+    <ImageView
+        android:id="@+id/top_iv"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/top"
+        android:layout_height="1px"
+        android:background="@drawable/shadow_line" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top_iv" >
+
+        <com.dylan.uiparts.listview.DragListView
+            android:id="@+id/group_subject_detail_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:divider="@color/new_backgroud"
+            android:dividerHeight="1.0dip"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/group_subject_detail_addp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#ffff0000"
+            android:textSize="20.0sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_group_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/group_subject_detail_edit_layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4.0dip"
+            android:layout_marginTop="1.0px"
+            android:background="#ffffffff"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="5.0dip"
+            android:paddingTop="5.0dip" >
+
+            <CheckBox
+                android:id="@+id/group_subject_detail_like_btn"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:background="@drawable/selector_btn_like_for_subject"
+                android:button="@null"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/group_subject_detail_edit_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_toLeftOf="@+id/group_subject_detail_like_btn"
+                android:background="@drawable/activity_pl_bgedit"
+                android:drawableLeft="@drawable/icon_group_edit_left"
+                android:gravity="center_vertical"
+                android:hint="  回复楼主"
+                android:paddingBottom="4.0dip"
+                android:paddingLeft="5.0dip"
+                android:paddingTop="4.0dip"
+                android:textColorHint="@color/light_grey"
+                android:textSize="13.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/group_subject_detail_edit_layout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/group_subject_detail_face_btn"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/selector_btn_face" />
+
+            <Button
+                android:id="@+id/group_subject_detail_add_btn"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_toRightOf="@+id/group_subject_detail_face_btn"
+                android:background="@drawable/selector_btn_add" />
+
+            <Button
+                android:id="@+id/group_subject_detail_send_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:background="@drawable/selector_btn_send_backgroud"
+                android:onClick="onClick"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="12.0dip"
+                android:paddingRight="12.0dip"
+                android:paddingTop="10.0dip"
+                android:text="@string/send"
+                android:textSize="14.0sp" />
+
+            <EditText
+                android:id="@+id/group_subject_detail_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toLeftOf="@+id/group_subject_detail_send_btn"
+                android:layout_toRightOf="@+id/group_subject_detail_add_btn"
+                android:background="@drawable/group_search_edit_bg"
+                android:inputType="textMultiLine"
+                android:maxHeight="80.0dip"
+                android:maxLength="500"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="5.0dip"
+                android:paddingTop="10.0dip"
+                android:singleLine="false"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/post_comment_bottom_content_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="250.0dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@color/grey_group_for_des" />
+
+            <include
+                android:id="@+id/post_comment_bottom_more_layout"
+                layout="@layout/post_more_layout"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/post_comment_bottom_pic_layout"
+                layout="@layout/post_pic_layout"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/post_comment_bottom_face_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30.0dip"
+                layout="@layout/post_face_layout"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/more_container_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top"
+        android:background="@color/black_translucent"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/more_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="20.0dip"
+            android:paddingTop="20.0dip"
+            android:visibility="gone" >
+
+            <CheckBox
+                android:id="@+id/more_layout_collect_cb"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:button="@null"
+                android:drawablePadding="5.0dip"
+                android:drawableTop="@drawable/selector_cb_collect"
+                android:gravity="center"
+                android:text="收藏"
+                android:textColor="@color/grey_group_for_des"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/more_layout_turn_page_tv"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:drawablePadding="5.0dip"
+                android:drawableTop="@drawable/selector_btn_turn_page"
+                android:gravity="center"
+                android:text="跳页"
+                android:textColor="@color/grey_group_for_des"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/more_layout_floor_host_tv"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:drawablePadding="5.0dip"
+                android:drawableTop="@drawable/selector_btn_personal"
+                android:gravity="center"
+                android:text="楼主"
+                android:textColor="@color/grey_group_for_des"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <include
+        android:id="@+id/mLoadingIconLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top"
+        layout="@layout/layout_loading_mask"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/mLoadinglayout"
+        layout="@layout/uploading_dialog"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/mLoadingFailedLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top"
+        layout="@layout/layout_loading_failed"
+        android:visibility="gone" />
+
+</RelativeLayout>

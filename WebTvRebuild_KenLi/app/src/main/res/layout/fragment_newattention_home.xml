@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5" >
+
+    <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/attentionList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none" >
+    </com.dylan.uiparts.listview.DragListView>
+
+    <include
+        android:id="@+id/attention_loader_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_loading_mask" />
+
+    <ImageView
+        android:id="@+id/back_top"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/transparent"
+        android:src="@drawable/back_top"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

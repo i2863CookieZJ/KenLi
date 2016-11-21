@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlebartop"
+        layout="@layout/layout_titlebar" />
+
+    <LinearLayout
+        android:id="@+id/mLivedetailFooter"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/mLivedetailBack"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_back_icon" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:paddingRight="5dip" />
+
+        <ImageButton
+            android:id="@+id/mLivedetailDownload"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_download"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_footer_divider"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/mLivedetailShare"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_share_icon"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TabHost
+        android:id="@+id/mLivedetailContentTab"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dip"
+        android:layout_marginTop="0dip"
+        android:layout_weight="1" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:background="@color/white"
+            android:tag="tabs" >
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_marginTop="40dip"
+            android:background="@color/livenews_list_background" >
+
+            <ListView
+                android:id="@+id/mGuide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dip"
+                android:background="@color/transparent"
+                android:divider="@null"
+                android:dividerHeight="0dip" />
+        </FrameLayout>
+    </TabHost>
+
+    <include
+        android:id="@+id/mplayerView"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        layout="@layout/controllerplaying" />
+
+</LinearLayout>

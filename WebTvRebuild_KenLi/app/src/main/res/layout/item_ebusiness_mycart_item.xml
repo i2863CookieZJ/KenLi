@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/all_select_rl"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip" >
+
+            <CheckBox
+                android:id="@+id/all_shop_card_cb"
+                style="@style/CustomCheckboxTheme"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_centerInParent="true"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10.0dip"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/common_dark_gray_text_color"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shadow_line"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90.0dip" >
+
+        <RelativeLayout
+            android:id="@+id/select_rl"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip" >
+
+            <CheckBox
+                android:id="@+id/shop_card_cb"
+                android:layout_width="20.0dip"
+                android:background="@drawable/checkbox_style"
+                android:layout_height="20.0dip"
+                android:button="@null"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:enabled="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/goodsHeaderIconContainer"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_toRightOf="@+id/select_rl"
+            android:background="@drawable/newattention_item_headericon_border" >
+
+            <com.appsdk.advancedimageview.AdvancedImageView
+                android:id="@+id/goodsHeaderIcon"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_margin="1.0dip"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_thumbnail_square"
+                appsdk:fadeInDuration="0.3"
+                appsdk:imageDefault="@drawable/default_thumbnail_square"
+                appsdk:imageError="@drawable/default_thumbnail_square"
+                appsdk:imageLoading="@drawable/default_thumbnail_square"
+                appsdk:roundRadius="2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rightContentLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="70.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_toRightOf="@+id/goodsHeaderIconContainer" >
+
+            <TextView
+                android:id="@+id/goodsTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="2"
+                android:text="苹果笔记本/超级本迷你4口USB集线器优越者推出的便携式USB集线器Y-214"
+                android:textColor="@color/common_dark_gray_text_color"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/goodsPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="2"
+                android:text="¥128.02"
+                android:textColor="@color/common_red_color"
+                android:textSize="13.0sp" />
+
+            <TextView
+                android:id="@+id/goodsCountSub"
+                android:layout_width="40.0dip"
+                android:layout_height="30.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/goodsCount"
+                android:background="@drawable/btn_change_goods_count"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/common_light_gray_text_color"
+                android:textSize="12.0sp" />
+
+            <EditText
+                android:id="@+id/goodsCount"
+                android:layout_width="40.0dip"
+                android:layout_height="30.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/goodsCountPlus"
+                android:background="@null"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="numberSigned"
+                android:text="1"
+                android:textColor="@color/common_gray_text_color"
+                android:textSize="12.0sp" />
+
+            <TextView
+                android:id="@+id/goodsCountPlus"
+                android:layout_width="40.0dip"
+                android:layout_height="30.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_change_goods_count"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/common_light_gray_text_color"
+                android:textSize="12.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

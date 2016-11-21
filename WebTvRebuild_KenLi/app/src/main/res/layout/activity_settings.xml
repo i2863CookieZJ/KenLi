@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/settings_dividearea" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        android:id="@+id/header_ctv"
+        custom:style="back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:c_title="@string/settings_title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/divider_layout"
+        android:layout_below="@+id/header_ctv" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginBottom="3.0dip"
+                android:background="@drawable/shadow_line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="52.0dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:inputType="none"
+                        android:text="@string/settings_nopicturemode"
+                        android:textColor="@color/common_gray_text_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:text="非Wifi环境下不显示图片"
+                        android:textColor="@color/common_light_gray_text_color"
+                        android:textSize="11.0sp" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/mSettingsNoPictureMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/pop_switch_off" />
+
+                <com.dylan.uiparts.views.SwitchButton
+                    android:id="@+id/mSettingsNoPictureMode_old"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/divider_full" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="15.0dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:text="@string/settings_nightmode"
+                    android:textAppearance="@style/MySettingsTextStyle" />
+
+                <com.dylan.uiparts.views.SwitchButton
+                    android:id="@+id/mSettingsNightMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/divider_full"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="15.0dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:text="@string/settings_autohide"
+                    android:textAppearance="@style/MySettingsTextStyle" />
+
+                <com.dylan.uiparts.views.SwitchButton
+                    android:id="@+id/mSettingsAutoHide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/divider_full"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip" >
+
+                <TextView
+                    android:id="@+id/settings_fontsize_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:text="@string/settings_fontsize"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16.0sp" />
+
+                <SeekBar
+                    android:id="@+id/mSettingsFontSizeSeekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30.0dip"
+                    android:layout_toRightOf="@+id/settings_fontsize_text"
+                    android:maxHeight="2.0dip"
+                    android:minHeight="2.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:progressDrawable="@drawable/fontsize_seekbar_img"
+                    android:thumb="@drawable/fontsize_thumb" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/divider_full" />
+
+            <RelativeLayout
+                android:id="@+id/mSettingsClear"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:background="@drawable/selector_home_list" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:background="@color/white"
+                    android:inputType="none"
+                    android:text="@string/settings_clear"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8.0dip"
+                    android:drawableRight="@drawable/usercenter_arrow_small"
+                    android:gravity="center_vertical"
+                    android:textColor="#ff838383"
+                    android:textSize="12.0sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginBottom="5.0dip"
+                android:background="@drawable/shadow_line" />
+
+            <RelativeLayout
+                android:id="@+id/mSettingsNewGuide"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15.0dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:text="@string/settings_newguide"
+                    android:textAppearance="@style/MySettingsTextStyle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/settings_arrow_blue" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/divider_full"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/mSettingsAboutus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="15.0dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:text="@string/settings_aboutus"
+                    android:textAppearance="@style/MySettingsTextStyle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/settings_arrow_blue" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20.0dip"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/mSettingsUpdate"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:text="@string/settings_update"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/now_banben"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/update_arrow_tv"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:text="V1.0.0"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/update_arrow_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8.0dip"
+                    android:drawableRight="@drawable/usercenter_arrow_small"
+                    android:gravity="center_vertical"
+                    android:textColor="#ff838383"
+                    android:textSize="12.0sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/mSettingsLogout"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                android:layout_marginTop="33.0dip"
+                android:background="@drawable/redbutton"
+                android:clickable="true"
+                android:gravity="center"
+                android:inputType="none"
+                android:onClick="onClick"
+                android:text="退出帐号登录"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

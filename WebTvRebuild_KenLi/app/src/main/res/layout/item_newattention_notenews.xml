@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/newattention_itemcontent_topmargin" >
+
+    <!-- 这里面是通知服务类新闻列表用的 -->
+
+    <TextView
+        android:id="@+id/noteServiceNewsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="便民通知"
+        android:textColor="@color/black"
+        android:textSize="@dimen/newattention_newsttitle_textsize" />
+
+    <TextView
+        android:id="@+id/noteServiceNewsPublishDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="04-20		16:43"
+        android:textColor="#A8A8A8"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/noteServiceNewsSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noteServiceNewsTitle"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3sp"
+        android:maxLines="3"
+        android:text="Android系统中TextView默认显示中文时会比较紧凑,不是很美观。为了让每行保持一定的行间距,可以设置属性"
+        android:textColor="#A8A8A8"
+        android:textSize="15sp" />
+
+</RelativeLayout>

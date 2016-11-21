@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/channel_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/new_audiolive_bgcolor"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@color/new_audiolive_bgcolor" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/tvchannel_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@null" >
+
+                    <TextView
+                        android:id="@+id/tvchannel_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:textColor="#828282"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/tvchannel_linearlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvchannel_title"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:divider="@drawable/huizhousarft_channleitem_gapline"
+                        android:orientation="vertical"
+                        android:showDividers="middle" >
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/radiochannel_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvchannel_container"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@null" >
+
+                    <TextView
+                        android:id="@+id/radiochannel_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:textColor="#828282"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/radiochannel_linearlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/radiochannel_title"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:divider="@drawable/huizhousarft_channleitem_gapline"
+                        android:orientation="vertical"
+                        android:showDividers="middle" >
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <!-- <ImageButton -->
+        <!-- android:id="@+id/about_huizhou" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignParentBottom="true" -->
+        <!-- android:adjustViewBounds="true" -->
+        <!-- android:background="@color/transparent" -->
+        <!-- android:scaleType="fitXY" -->
+        <!-- android:src="@drawable/about_huizhou_sarft" -->
+        <!-- android:textColor="#F77154" -->
+        <!-- tools:ignore="ContentDescription" /> -->
+
+        <RelativeLayout
+            android:id="@+id/mAdLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:visibility="gone" >
+
+            <com.appsdk.advancedimageview.AdvancedImageCarousel
+                android:id="@+id/mAdImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                appsdk:aspectRatio="5.0"
+                appsdk:imageDefault="@drawable/trans"
+                appsdk:imageError="@drawable/trans"
+                appsdk:imageLoading="@drawable/trans" />
+
+            <ImageButton
+                android:id="@+id/mAdCloseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:contentDescription="@null"
+                android:padding="8dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/ad_close_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/mLoadingIconLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading_mask"
+        android:visibility="gone" />
+
+</RelativeLayout>

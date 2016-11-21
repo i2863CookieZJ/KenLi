@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lin_zhuanti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/new_lines" >
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/new_start"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="  专题"
+                android:textColor="@color/new_mess_zt"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/zhuanti"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:drawableRight="@drawable/new_right_arrow"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/new_mess_zt"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/new_lines" >
+        </View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/zixun_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/zixun_top_lines"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/new_lines"
+            android:orientation="horizontal"
+            tools:ignore="Suspicious0dp" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/s_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/tw_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:drawableRight="@drawable/new_right_arrow"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="标题"
+                android:textColor="@color/new_mess_zt"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/new_lines" >
+        </LinearLayout>
+
+        <com.sobey.cloud.webtv.fragment.utils.MyListView
+            android:id="@+id/tw_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#f6f6f6"
+            android:dividerHeight="1dp" />
+
+        <com.sobey.cloud.webtv.fragment.utils.MyGridView
+            android:id="@+id/jm_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/new_backgroud"
+            android:horizontalSpacing="1dp"
+            android:listSelector="@null"
+            android:numColumns="2"
+            android:verticalSpacing="1dp" />
+
+        <LinearLayout
+            android:id="@+id/zt_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/zt_timu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="题目"
+                android:textColor="#161616"
+                android:textSize="18sp" />
+
+            <com.sobey.cloud.webtv.fragment.utils.MyGridView
+                android:id="@+id/ts_gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/top_video_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/new_lines"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 视频列表 -->
+
+    <LinearLayout
+        android:id="@+id/lin_shipin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/new_lines"
+            tools:ignore="Suspicious0dp" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/sp_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:drawableRight="@drawable/new_right_arrow"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="纪录片"
+                android:textColor="@color/new_mess_zt"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/new_lines" >
+        </LinearLayout>
+
+        <com.sobey.cloud.webtv.fragment.utils.MyListView
+            android:id="@+id/sp_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="#f6f6f6"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+</LinearLayout>

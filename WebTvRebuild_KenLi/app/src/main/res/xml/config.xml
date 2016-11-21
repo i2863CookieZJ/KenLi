@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns:gap="http://phonegap.com/ns/1.0"
+    id="com.phonegap.helloworld"
+    version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets" >
+
+    <name>
+Hello Cordova
+    </name>
+
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+
+    <access origin="*" />
+
+    <content src="index.html" />
+
+    <preference
+        name="loglevel"
+        value="DEBUG" />
+
+    <feature name="App" >
+        <param
+            name="android-package"
+            value="org.apache.cordova.App" />
+    </feature>
+    <feature name="Camera" >
+        <param
+            name="android-package"
+            value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Notification" >
+        <param
+            name="android-package"
+            value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Vibration" >
+        <param
+            name="android-package"
+            value="org.apache.cordova.vibration.Vibration" />
+    </feature>
+    <feature name="VideoPlayer" >
+        <param
+            name="android-package"
+            value="com.sobey.cloud.webtv.views.web.VideoPlayer" />
+    </feature>
+    <feature name="myplugin" >
+        <param
+            name="android-package"
+            value="com.sobey.cloud.webtv.cordova.plugin.MyCordovaPlugin" />
+        <param
+            name="onload"
+            value="true" />
+    </feature>
+
+    <name>
+HelloWorld
+    </name>
+
+    <description>
+        Hello World sample application that responds to the deviceready event.
+    </description>
+
+    <author
+        email="support@phonegap.com"
+        href="http://phonegap.com" >
+        PhoneGap Team
+    </author>
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+
+    <preference
+        name="permissions"
+        value="none" />
+    <preference
+        name="orientation"
+        value="default" />
+    <preference
+        name="target-device"
+        value="universal" />
+    <preference
+        name="fullscreen"
+        value="true" />
+    <preference
+        name="webviewbounce"
+        value="true" />
+    <preference
+        name="prerendered-icon"
+        value="true" />
+    <preference
+        name="stay-in-webview"
+        value="false" />
+    <preference
+        name="ios-statusbarstyle"
+        value="black-opaque" />
+    <preference
+        name="detect-data-types"
+        value="true" />
+    <preference
+        name="exit-on-suspend"
+        value="false" />
+    <preference
+        name="show-splash-screen-spinner"
+        value="true" />
+    <preference
+        name="auto-hide-splash-screen"
+        value="true" />
+    <preference
+        name="disable-cursor"
+        value="false" />
+    <preference
+        name="android-minSdkVersion"
+        value="7" />
+    <preference
+        name="android-installLocation"
+        value="auto" />
+
+    <icon src="icon.png" />
+    <icon
+        src="res/icon/android/icon-36-ldpi.png"
+        gap:density="ldpi"
+        gap:platform="android" />
+    <icon
+        src="res/icon/android/icon-48-mdpi.png"
+        gap:density="mdpi"
+        gap:platform="android" />
+    <icon
+        src="res/icon/android/icon-72-hdpi.png"
+        gap:density="hdpi"
+        gap:platform="android" />
+    <icon
+        src="res/icon/android/icon-96-xhdpi.png"
+        gap:density="xhdpi"
+        gap:platform="android" />
+    <icon
+        src="res/icon/blackberry/icon-80.png"
+        gap:platform="blackberry" />
+    <icon
+        src="res/icon/blackberry/icon-80.png"
+        gap:platform="blackberry"
+        gap:state="hover" />
+    <icon
+        height="57"
+        src="res/icon/ios/icon-57.png"
+        width="57"
+        gap:platform="ios" />
+    <icon
+        height="72"
+        src="res/icon/ios/icon-72.png"
+        width="72"
+        gap:platform="ios" />
+    <icon
+        height="114"
+        src="res/icon/ios/icon-57-2x.png"
+        width="114"
+        gap:platform="ios" />
+    <icon
+        height="144"
+        src="res/icon/ios/icon-72-2x.png"
+        width="144"
+        gap:platform="ios" />
+    <icon
+        src="res/icon/webos/icon-64.png"
+        gap:platform="webos" />
+    <icon
+        src="res/icon/windows-phone/icon-48.png"
+        gap:platform="winphone" />
+    <icon
+        src="res/icon/windows-phone/icon-173.png"
+        gap:platform="winphone"
+        gap:role="background" />
+
+    <gap:splash
+        src="res/screen/android/screen-ldpi-portrait.png"
+        gap:density="ldpi"
+        gap:platform="android" />
+    <gap:splash
+        src="res/screen/android/screen-mdpi-portrait.png"
+        gap:density="mdpi"
+        gap:platform="android" />
+    <gap:splash
+        src="res/screen/android/screen-hdpi-portrait.png"
+        gap:density="hdpi"
+        gap:platform="android" />
+    <gap:splash
+        src="res/screen/android/screen-xhdpi-portrait.png"
+        gap:density="xhdpi"
+        gap:platform="android" />
+    <gap:splash
+        src="res/screen/blackberry/screen-225.png"
+        gap:platform="blackberry" />
+    <gap:splash
+        height="480"
+        src="res/screen/ios/screen-iphone-portrait.png"
+        width="320"
+        gap:platform="ios" />
+    <gap:splash
+        height="960"
+        src="res/screen/ios/screen-iphone-portrait-2x.png"
+        width="640"
+        gap:platform="ios" />
+    <gap:splash
+        height="1024"
+        src="res/screen/ios/screen-ipad-portrait.png"
+        width="768"
+        gap:platform="ios" />
+    <gap:splash
+        height="768"
+        src="res/screen/ios/screen-ipad-landscape.png"
+        width="1024"
+        gap:platform="ios" />
+    <gap:splash
+        src="res/screen/windows-phone/screen-portrait.jpg"
+        gap:platform="winphone" />
+
+    <access origin="http://127.0.0.1*" />
+
+</widget>

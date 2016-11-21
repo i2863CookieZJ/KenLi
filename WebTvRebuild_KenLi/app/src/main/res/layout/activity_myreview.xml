@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:background="@drawable/comment_titlebar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/mMyReviewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:padding="10dip"
+            android:text="@string/myreview_title"
+            android:textColor="@color/home_tab_text_focus"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/mMyReviewBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_back_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/divider_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_above="@id/footer_layout"
+        android:background="@color/grey"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/myreview_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@drawable/divider_middle" />
+
+</RelativeLayout>

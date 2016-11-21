@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/white"
+    android:gravity="center_horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/mCampaignArticleListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:src="@drawable/white_back_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/mCampaignArticleListTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="50dip"
+            android:layout_marginRight="50dip"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dip"
+            android:textColor="@color/common_dark_gray_text_color"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/mCampaignArticleListDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/mCampaignArticleListHeader"
+        android:background="@color/grey" />
+
+    <com.appsdk.androidadvancedui.AdvancedListView
+        android:id="@+id/mCampaignArticleListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mCampaignArticleListDivider"
+        android:divider="@color/light_grey"
+        android:dividerHeight="1dip" />
+
+</RelativeLayout>

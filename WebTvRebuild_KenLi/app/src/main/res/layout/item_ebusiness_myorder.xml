@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/divider_full" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/divider_full" />
+
+    <RelativeLayout
+        android:id="@+id/singleGoodsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/goodsHeaderIconContainer"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/newattention_item_headericon_border" >
+
+            <com.appsdk.advancedimageview.AdvancedImageView
+                android:id="@+id/goodsHeaderIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_thumbnail_square"
+                appsdk:fadeInDuration="0.3"
+                appsdk:imageDefault="@drawable/default_thumbnail_square"
+                appsdk:imageError="@drawable/default_thumbnail_square"
+                appsdk:imageLoading="@drawable/default_thumbnail_square"
+                appsdk:roundRadius="2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rightContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/goodsHeaderIconContainer" >
+
+            <TextView
+                android:id="@+id/goodsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="2"
+                android:text="苹果笔记本/超级本迷你4口USB集线器优越者推出的便携式USB集线器Y-214"
+                android:textColor="@color/background"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/goodsPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/goodsTitle"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="2"
+                android:text="¥128.02"
+                android:textColor="#C00000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tradeDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/goodsPrice"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="2"
+                android:text="2015-06-22 21:58:42"
+                android:textColor="#A8A8A8"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mutipleGoodsListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <HorizontalScrollView
+            android:id="@+id/mutipleGoodsImageList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/goodsImageContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/mutipleGoodsPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/mutipleGoodsImageList"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="2"
+            android:paddingBottom="10dp"
+            android:text="¥128.02"
+            android:textColor="#C00000"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/mutipleGoodsTradeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mutipleGoodsImageList"
+            android:layout_toRightOf="@id/mutipleGoodsPrice"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:text="2015-06-22 21:58:42"
+            android:textColor="#A8A8A8"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

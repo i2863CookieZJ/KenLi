@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="16.0dip" >
+
+        <LinearLayout
+            android:id="@+id/popwindow_more_share_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:background="@drawable/shape_popwindow_btn"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pop_share" />
+
+            <TextView
+                android:id="@+id/popwindow_more_share"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10.0dip"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:inputType="none"
+                android:text="@string/share_title"
+                android:textColor="@color/common_gray_text_color"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/popwindow_more_search_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:layout_marginTop="15.0dip"
+            android:background="@drawable/shape_popwindow_btn"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pop_search" />
+
+            <TextView
+                android:id="@+id/popwindow_more_search"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10.0dip"
+                android:gravity="center_vertical"
+                android:inputType="none"
+                android:text="@string/search_hint"
+                android:textColor="@color/common_gray_text_color"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/popwindow_more_collection_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:layout_marginTop="15.0dip"
+            android:background="@drawable/shape_popwindow_btn"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/popwindow_more_collection_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pop_noshoucang" />
+
+            <TextView
+                android:id="@+id/popwindow_more_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10.0dip"
+                android:gravity="center_vertical"
+                android:inputType="none"
+                android:text="@string/collection_title"
+                android:textColor="@color/common_gray_text_color"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/setting_tool_icon"
+            android:drawablePadding="5.0dip"
+            android:gravity="center_vertical"
+            android:hint="@string/settings_title"
+            android:inputType="none"
+            android:paddingLeft="10.0dip"
+            android:textColor="@color/popwindow_text"
+            android:textSize="18.0sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/greybox_bound"
+            android:orientation="vertical"
+            android:padding="10.0dip" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/popwindow_more_showpicture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:drawablePadding="5.0dip"
+                    android:gravity="center_vertical"
+                    android:hint="@string/popwindow_showpicture"
+                    android:inputType="none"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="14.0sp" />
+
+                <com.dylan.uiparts.views.SwitchButton
+                    android:id="@+id/popwindow_more_showpicture_btnold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/popwindow_more_showpicture_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/pop_switch_off" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:contentDescription="@null"
+                android:scaleType="center"
+                android:src="@drawable/divider_dot"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/popwindow_more_nightmode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/setting_nightmode_icon"
+                    android:drawablePadding="5.0dip"
+                    android:gravity="center_vertical"
+                    android:hint="@string/popwindow_nightmode"
+                    android:inputType="none"
+                    android:textColor="@color/popwindow_text"
+                    android:textSize="18.0sp" />
+
+                <com.dylan.uiparts.views.SwitchButton
+                    android:id="@+id/popwindow_more_nightmode_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:contentDescription="@null"
+                android:scaleType="center"
+                android:src="@drawable/divider_dot"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/popwindow_more_fontsize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:drawablePadding="5.0dip"
+                    android:gravity="center_vertical"
+                    android:hint="@string/popwindow_fontsize"
+                    android:inputType="none"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="14.0sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="80.0dip"
+                    android:layout_toRightOf="@+id/popwindow_more_fontsize"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="14.0dip"
+                        android:paddingRight="14.0dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="小"
+                            android:textColor="#ff838383"
+                            android:textSize="14.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="大"
+                            android:textColor="#ff838383"
+                            android:textSize="14.0sp" />
+                    </RelativeLayout>
+
+                    <SeekBar
+                        android:id="@+id/popwindow_more_fontsize_seekbar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxHeight="2.0dip"
+                        android:minHeight="2.0dip"
+                        android:paddingLeft="14.0dip"
+                        android:paddingRight="14.0dip"
+                        android:progressDrawable="@drawable/fontsize_seekbar_img"
+                        android:thumb="@drawable/fontsize_thumb" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/popwindow_more_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:layout_marginTop="15.0dip"
+            android:background="@drawable/shape_popwindow_btn"
+            android:clickable="true"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="@string/search_confirm"
+            android:textColor="@color/common_gray_text_color"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_above="@+id/bottom"
+        android:background="@drawable/shadow_line" />
+
+</RelativeLayout>

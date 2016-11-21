@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        android:id="@+id/header_ctv"
+        custom:style="back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/myOrderList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_ctv"
+        android:background="@color/white"
+        android:divider="@null"
+        android:dividerHeight="0.0dip"
+        android:headerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none" />
+
+    <include
+        android:id="@+id/empty_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_ctv"
+        layout="@layout/layout_loading_failed"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/nocontent_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_ctv"
+        layout="@layout/layout_nocontent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/loadingmask"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_ctv"
+        layout="@layout/layout_loading_mask" />
+
+    <TextView
+        android:id="@+id/submit_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/redbutton"
+        android:clickable="true"
+        android:gravity="center"
+        android:inputType="none"
+        android:text="结算"
+        android:textColor="@color/white"
+        android:textSize="16.0sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

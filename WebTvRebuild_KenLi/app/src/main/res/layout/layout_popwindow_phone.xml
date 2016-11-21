@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popwindow_phone_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translucent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dip"
+        android:background="@drawable/greybox_bound"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/popwindow_phone_title"
+            android:textColor="@color/popwindow_text"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/popwindow_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:textColor="@color/popwindow_text"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/popwindow_phone_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/greybox_bound"
+                android:clickable="true"
+                android:gravity="center"
+                android:hint="@string/popwindow_phone_cancel"
+                android:inputType="none"
+                android:textColor="@color/popwindow_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/popwindow_phone_ok"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/greybox_bound"
+                android:clickable="true"
+                android:gravity="center"
+                android:hint="@string/popwindow_phone_ok"
+                android:inputType="none"
+                android:textColor="@color/popwindow_text"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

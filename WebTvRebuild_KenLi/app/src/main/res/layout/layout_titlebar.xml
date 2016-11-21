@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip"
+    android:layout_alignParentTop="true"
+    android:background="@color/white" >
+
+    <ImageButton
+        android:id="@+id/titlebar_module"
+        android:layout_width="48.0dip"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/titlebar_menu_icon"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/back_rl"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8.0dip"
+            android:src="@drawable/white_back_icon" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/titlebar_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="5.0dip"
+        android:textColor="@color/common_gray_text_color"
+        android:textSize="18.0sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shadow_line" />
+</RelativeLayout>

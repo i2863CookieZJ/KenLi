@@ -1,0 +1,262 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/campaign_player_detail_background"
+    android:gravity="center_horizontal" >
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/mCampaignPlayerDetailHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/new_green"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/mCampaignPlayerDetailBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:paddingBottom="4dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="4dip"
+            android:scaleType="center"
+            android:src="@drawable/white_back_icon" />
+
+        <TextView
+            android:id="@+id/mCampaignPlayerDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="50dip"
+            android:layout_marginRight="50dip"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dip"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    -->
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        android:id="@+id/header_ctv"
+        custom:style="back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/mCampaignPlayerDetailDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/header_ctv"
+        android:background="@color/grey" />
+
+    <com.sobey.cloud.webtv.utils.VerticalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_ctv" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip" >
+
+                    <com.appsdk.advancedimageview.AdvancedImageView
+                        android:id="@+id/mCampaignPlayerDetailLogoImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dip"
+                        android:layout_weight="2"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_thumbnail_news"
+                        appsdk:aspectRatio="1.0"
+                        appsdk:fadeInDuration="0.3"
+                        appsdk:imageDefault="@drawable/default_thumbnail_news"
+                        appsdk:imageError="@drawable/default_thumbnail_news"
+                        appsdk:imageLoading="@drawable/default_thumbnail_news"
+                        appsdk:roundRadius="3" />
+
+                    <View
+                        android:layout_width="5dip"
+                        android:layout_height="wrap_content"
+                        android:background="@null" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/mCampaignPlayerDetailNameTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dip"
+                            android:layout_marginTop="3dip"
+                            android:ellipsize="end"
+                            android:gravity="left"
+                            android:singleLine="true"
+                            android:textAppearance="@style/MyHomeListTitleTextStyle" />
+
+                        <TextView
+                            android:id="@+id/mCampaignPlayerDetailSummaryTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mCampaignPlayerDetailNameTextView"
+                            android:ellipsize="end"
+                            android:lineSpacingMultiplier="1.2"
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:textAppearance="@style/MyTopicHomeListSummaryTextStyle" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mCampaignPlayerDetailSummaryTextView" >
+
+                            <ImageView
+                                android:id="@+id/upicon"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@null"
+                                android:src="@drawable/toupiao_dz" />
+
+                            <TextView
+                                android:id="@+id/mCampaignPlayerDetailUpNumTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dip"
+                                android:layout_toRightOf="@id/upicon"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:textAppearance="@style/MyHomeListTipsTextStyle" />
+
+                            <TextView
+                                android:id="@+id/mCampaignPlayerDetailVoteBtn"
+                                android:layout_width="80dip"
+                                android:layout_height="30dip"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/btn_toupiao_choosed"
+                                android:gravity="center"
+                                android:text="投票"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="30dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="@null"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/campaign_detail_go_icon" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/shadow_line" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:text="相关作品"
+                android:textColor="#1f1f1f"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/mCampaignPlayerDetailListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp" />
+        </LinearLayout>
+    </com.sobey.cloud.webtv.utils.VerticalScrollView>
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/mLoadingIconLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mCampaignPlayerDetailDivider"
+        android:background="@color/loading_background_color"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/loading_chinese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/loading_chinese"
+            android:textAppearance="@style/MyLoadingChineseTextStyle" />
+
+        <ProgressBar
+            android:id="@+id/loading_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/loading_chinese"
+            android:layout_centerHorizontal="true"
+            android:indeterminateDrawable="@drawable/loading_icon_drawable"
+            android:paddingBottom="5dip" />
+    </RelativeLayout>
+    -->
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header_ctv"
+        layout="@layout/layout_loading_mask" />
+
+    <TextView
+        android:id="@+id/mCampaignPlayerDetail_addp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="12"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

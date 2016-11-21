@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/white"
+    android:gravity="center_horizontal" >
+
+    <LinearLayout
+        android:id="@+id/mVotedetailFooter"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/mVotedetailBack"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_back_icon" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:paddingRight="5dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mVotedetailDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_above="@id/mVotedetailFooter"
+        android:background="@color/grey"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mVotedetailDivider" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/mVotedetailQuestionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/greybox_shape_corner"
+                android:orientation="vertical"
+                android:padding="10dip" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mVotedetailResultLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/greybox_shape_corner"
+                android:orientation="vertical"
+                android:padding="10dip" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mVotedetailSubmitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/greybox_redbackgound"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="提  交"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/mVotedetailSubmitSuccessBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/vote_button_background"
+                android:enabled="false"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="提交成功"
+                android:textColor="@color/vote_button_color"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/mVotedetailControlLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/mVotedetailPreBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/vote_button_background"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="上一题"
+                    android:textColor="@color/vote_button_color"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/mVotedetailNextBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/vote_button_background"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="下一题"
+                    android:textColor="@color/vote_button_color"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/mVotedetailLastBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/greybox_redbackgound"
+                    android:gravity="center"
+                    android:padding="10dip"
+                    android:text="完成"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/mLoadingIconLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mVotedetailDivider"
+        android:background="@color/loading_background_color"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/loading_chinese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/loading_chinese"
+            android:textAppearance="@style/MyLoadingChineseTextStyle" />
+
+        <ProgressBar
+            android:id="@+id/loading_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/loading_chinese"
+            android:layout_centerHorizontal="true"
+            android:indeterminateDrawable="@drawable/loading_icon_drawable"
+            android:paddingBottom="5dip" />
+
+        <TextView
+            android:id="@+id/loading_english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loading_chinese"
+            android:layout_centerHorizontal="true"
+            android:text="@string/loading_english"
+            android:textAppearance="@style/MyLoadingEnglishTextStyle" />
+    </RelativeLayout>
+
+</RelativeLayout>

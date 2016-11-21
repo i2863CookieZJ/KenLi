@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center_vertical"
+        android:padding="8.0dip" >
+
+        <ImageView
+            android:id="@+id/type_iv"
+            android:layout_width="17.0dip"
+            android:layout_height="17.0dip"
+            android:src="@drawable/ic_sign_up" />
+
+        <TextView
+            android:id="@+id/ac_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:text="活动标题"
+            android:textColor="@color/common_gray_text_color"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+    <com.appsdk.advancedimageview.AdvancedImageView
+        android:id="@+id/campaign_logo_imageview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_thumbnail_banner"
+        appsdk:aspectRatio="2.0"
+        appsdk:fadeInDuration="0.3"
+        appsdk:imageDefault="@drawable/default_thumbnail_banner"
+        appsdk:imageError="@drawable/default_thumbnail_banner"
+        appsdk:imageLoading="@drawable/default_thumbnail_banner"
+        appsdk:roundRadius="3" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="8.0dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="14.0dip"
+                    android:layout_height="14.0dip"
+                    android:src="@drawable/home_activity_personnum" />
+
+                <TextView
+                    android:id="@+id/new_acitivity_listitem_personnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:gravity="center_vertical"
+                    android:text="0人参与"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/new_acitivity_listitem_plnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24.0dip"
+                android:drawableLeft="@drawable/home_activity_pinlun"
+                android:drawablePadding="2.0dip"
+                android:gravity="center_vertical"
+                android:text="0评论"
+                android:textColor="#ff838383"
+                android:textSize="12.0sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/new_acitivity_listitem_baoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingBottom="4.0dip"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:paddingTop="4.0dip"
+            android:text="立即报名>>"
+            android:textColor="@color/common_black_color" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="#ffdcdcdc" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+
+            <com.appsdk.advancedimageview.AdvancedImageView
+                android:id="@+id/campaign_logo_imageview1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_thumbnail_banner"
+                appsdk:aspectRatio="2.0"
+                appsdk:fadeInDuration="0.3"
+                appsdk:imageDefault="@drawable/default_thumbnail_banner"
+                appsdk:imageError="@drawable/default_thumbnail_banner"
+                appsdk:imageLoading="@drawable/default_thumbnail_banner"
+                appsdk:roundRadius="3" />
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/new_ac_toum"
+                android:padding="5.0dip"
+                android:textColor="@color/white"
+                android:textSize="14.0sp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/cj_lin"
+            android:layout_width="70.0dip"
+            android:layout_height="90.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20.0dip"
+            android:background="@drawable/notice_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="2.0dip"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:src="@drawable/join_pic" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.0"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="参与人数"
+                        android:textColor="@color/white"
+                        android:textSize="10.0sp" />
+
+                    <TextView
+                        android:id="@+id/cj_count"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="#ffffe401"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"
+                android:src="@drawable/join_png" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ac_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:drawableLeft="@drawable/ac_time"
+        android:gravity="center"
+        android:paddingBottom="5.0dip"
+        android:text="活动时间"
+        android:textColor="#ff8d8d8d"
+        android:textSize="12.0sp" />
+
+</LinearLayout>

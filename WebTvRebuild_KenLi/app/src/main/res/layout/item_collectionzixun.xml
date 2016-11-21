@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_home_list"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:padding="8.0dip" >
+
+        <RelativeLayout
+            android:layout_width="120.0dip"
+            android:layout_height="80.0dip" >
+
+            <ImageView
+                android:id="@+id/item_clc_newsicon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/item_clc_newssptime"
+                android:layout_width="fill_parent"
+                android:layout_height="20.0dip"
+                android:layout_alignParentBottom="true"
+                android:background="#ff00ff00"
+                android:gravity="center|right"
+                android:text="00:10:08"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/item_clc_newsliveicon"
+                android:layout_width="55.0dip"
+                android:layout_height="55.0dip"
+                android:layout_centerInParent="true"
+                android:src="@drawable/new_attention_videnews_centericon"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8.0dip"
+            android:layout_weight="2.0"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/item_clc_newtitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Title"
+                android:textColor="#ff1f1f1f"
+                android:textSize="16.0sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="16.0dip" >
+
+                <TextView
+                    android:id="@+id/item_clc_newssummary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:text="summary"
+                    android:textColor="#ff838383"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/item_clc_newsaddtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:text="2015-12-16"
+                    android:textColor="#ff838383"
+                    android:textSize="12.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shadow_line" />
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="vertical" >
+
+    <com.sobey.cloud.webtv.widgets.LoopViewPager
+        android:id="@+id/topnews_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1px"
+        android:background="@color/white" >
+    </com.sobey.cloud.webtv.widgets.LoopViewPager>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/shadow_line" />
+
+</LinearLayout>

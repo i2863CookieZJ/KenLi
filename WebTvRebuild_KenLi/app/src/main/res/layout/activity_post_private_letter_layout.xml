@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/title_layout_for_group_post_subject" />
+    <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/group_subject_detail_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top"
+        android:layout_above="@+id/bottom"
+        android:background="@color/white"
+        android:divider="@null"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:paddingBottom="10dp"
+        android:transcriptMode="alwaysScroll"
+        android:listSelector="@android:color/transparent" />
+
+    <!-- 显示表情 更多按钮和输入框 -->
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/grey_group_for_bolder"
+            android:contentDescription="@string/aboutus_content" />
+
+        <RelativeLayout
+            android:id="@+id/group_subject_detail_edit_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_group_bg"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp" >
+
+            <Button
+                android:id="@+id/group_subject_detail_face_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/selector_btn_face" />
+
+            <Button
+                android:id="@+id/group_subject_detail_add_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/group_subject_detail_face_btn"
+                android:background="@drawable/selector_btn_add" />
+
+            <Button
+                android:id="@+id/group_subject_detail_send_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/selector_btn_send_backgroud"
+                android:onClick="onClick"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="10dp"
+                android:text="@string/send"
+                android:textSize="14sp" >
+            </Button>
+
+            <EditText
+                android:id="@+id/group_subject_detail_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@id/group_subject_detail_send_btn"
+                android:layout_toRightOf="@id/group_subject_detail_add_btn"
+                android:background="@drawable/group_search_edit_bg"
+                android:inputType="textMultiLine"
+                android:maxHeight="80dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:singleLine="false"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/post_comment_bottom_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/grey_group_for_des" />
+
+            <include
+                android:id="@+id/post_comment_bottom_more_layout"
+                layout="@layout/post_more_layout"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/post_comment_bottom_pic_layout"
+                layout="@layout/post_pic_layout"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/post_comment_bottom_face_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                layout="@layout/post_face_layout"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

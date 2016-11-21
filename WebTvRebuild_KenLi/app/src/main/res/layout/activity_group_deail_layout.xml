@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_group_bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/top"
+            layout="@layout/title_layout_for_group" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@drawable/shadow_line" />
+
+        <include layout="@layout/layout_loading_mask" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.dylan.uiparts.listview.DragListView
+                android:id="@+id/group_detail_activity_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey_group_bg"
+                android:divider="@color/grey_group_bg"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:listSelector="@drawable/selector_for_group_item"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/group_detail_activity_titlemore_container_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:visibility="gone" >
+
+                <include
+                    android:id="@+id/group_detail_activity_titlemore_layout"
+                    layout="@layout/group_tile_more_layout" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

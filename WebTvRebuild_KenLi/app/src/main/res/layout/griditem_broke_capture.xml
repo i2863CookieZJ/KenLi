@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/preview_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail_video"
+            appsdk:aspectRatio="1.78"
+            appsdk:imageDefault="@drawable/default_thumbnail_video"
+            appsdk:imageLoading="@drawable/default_thumbnail_video"
+            appsdk:imageError="@drawable/default_thumbnail_video"
+            appsdk:roundRadius="3" />
+
+        <ImageView
+            android:id="@+id/video_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:src="@drawable/broke_capture_video_icon" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/delete_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/broke_capture_remove_icon" />
+
+</LinearLayout>

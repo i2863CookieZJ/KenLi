@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        custom:style="back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:c_title="我的消息" />
+
+    <LinearLayout
+        android:id="@+id/ac_mymsg_letter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_home_list"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/mymsg_sx" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:text="私信"
+            android:textColor="@color/common_gray_text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ac_mymsg_lettertip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/usercenter_arrow"
+            android:gravity="center_vertical"
+            android:text="你有新消息哦"
+            android:textColor="#e80000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="66dp"
+        android:background="@drawable/shadow_line" />
+
+    <LinearLayout
+        android:id="@+id/ac_mymsg_qzpl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_home_list"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/mymsg_qz" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:text="圈子评论"
+            android:textColor="@color/common_gray_text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ac_mymsg_qzpltip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/usercenter_arrow"
+            android:gravity="center_vertical"
+            android:text="你有新消息哦"
+            android:textColor="#e80000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="66dp"
+        android:background="@drawable/shadow_line" />
+
+    <LinearLayout
+        android:id="@+id/ac_mymsg_sysmsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_home_list"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/mymsg_sys" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:text="系统消息"
+            android:textColor="@color/common_gray_text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ac_mymsg_sysmsgtip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/usercenter_arrow"
+            android:gravity="center_vertical"
+            android:text="你有新消息哦"
+            android:textColor="#e80000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="66dp"
+        android:background="@drawable/shadow_line" />
+
+</LinearLayout>

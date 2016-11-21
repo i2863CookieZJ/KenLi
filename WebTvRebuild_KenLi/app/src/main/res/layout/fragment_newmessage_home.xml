@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/newsList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="-8dp"
+        android:background="#f6f6f6"
+        android:divider="@null"
+        android:dividerHeight="8dp"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none" >
+    </com.dylan.uiparts.listview.DragListView>
+
+    <!-- <ImageView -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:background="@drawable/dot_normal" -->
+    <!-- tools:ignore="ContentDescription" /> -->
+    <!-- <com.handmark.pulltorefresh.library.Pull2RefreshScrollView -->
+    <!-- xmlns:ptr="http://schemas.android.com/apk/res-auto" -->
+    <!-- android:id="@+id/pull_refresh_scrollview" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- ptr:ptrMode="pullFromStart" -->
+    <!-- ptr:ptrAnimationStyle="rotate" -->
+    <!-- ptr:ptrDrawable="@drawable/pull_loading_icon" -->
+    <!-- ptr:ptrHeaderTextAppearance="@style/pull2scrollHeaderStyle" -->
+    <!-- ptr:ptrHeaderTextColor="#A8A8A8" -->
+    <!-- ptr:ptrScrollingWhileRefreshingEnabled="true" -->
+    <!-- > -->
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/newsList" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:orientation="vertical" > -->
+    <!-- </LinearLayout> -->
+    <!-- </com.handmark.pulltorefresh.library.Pull2RefreshScrollView> -->
+
+    <include
+        android:id="@+id/news_loader_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_loading_mask"
+        android:visibility="gone" />
+
+</RelativeLayout>

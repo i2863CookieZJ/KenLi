@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+	<com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/item_choose_photo_file_dir_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@null"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail_banner"
+            appsdk:aspectRatio="1.0"
+            android:layout_alignParentLeft="true"
+            appsdk:fadeInDuration="0.3"
+            android:layout_margin="10dp"
+            appsdk:imageDefault="@drawable/default_thumbnail_banner"
+            appsdk:imageError="@drawable/default_thumbnail_banner"
+            appsdk:imageLoading="@drawable/default_thumbnail_banner"
+            appsdk:roundRadius="5" />
+    <TextView 
+        android:id="@+id/item_choose_photo_file_dir_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_choose_photo_file_dir_iv"
+        android:textColor="@color/grey_group_for_name"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        android:text="全部图片（100）"/>
+    <ImageView
+        android:id="@+id/item_choose_photo_file_dir_iv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/icon_site_ok" />
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/mRegisterModifyNicknameBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_back_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/divider_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_above="@id/footer_layout"
+        android:background="@color/grey"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/comment_titlebar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:padding="10dip"
+            android:text="@string/register_verify_title"
+            android:textColor="@color/home_tab_text_normal"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/divider_layout"
+        android:layout_below="@id/header_layout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:text="@string/register_modify_nickname_notice"
+                android:textAppearance="@style/MyRegisterModifyNicknameTextStyle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:text="@string/register_modify_nickname_tips"
+                android:textAppearance="@style/MyRegisterVerifyTipsTextStyle" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/greybox_bound"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip" >
+
+                    <EditText
+                        android:id="@+id/mRegisterModifyNicknameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dip"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/register_modify_nickname_hint"
+                        android:inputType="text"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="5dip"
+                        android:singleLine="true"
+                        android:textAppearance="@style/MyLoginLogonInputTextStyle" >
+                    </EditText>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/mRegisterModifyNicknameSubmitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/greenbutton"
+                android:clickable="true"
+                android:gravity="center"
+                android:inputType="none"
+                android:text="@string/register_modify_nickname_submit"
+                android:textAppearance="@style/MyRedButtonTextStyle" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

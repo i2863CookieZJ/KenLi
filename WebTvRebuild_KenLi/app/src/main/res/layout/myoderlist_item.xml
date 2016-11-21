@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_home_list"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shadow_line" />
+
+    <View
+        android:id="@+id/top_line_view"
+        android:layout_width="fill_parent"
+        android:layout_height="4.0dip"
+        android:background="@drawable/shadow_line" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:gravity="center_vertical"
+        android:padding="10.0dip" >
+
+        <TextView
+            android:id="@+id/mol_oderno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/common_dark_gray_text_color"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/mol_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/common_dark_gray_text_color" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shadow_line" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90.0dip"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/mol_singlegoods_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/mols_good_iv"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip" />
+
+            <TextView
+                android:id="@+id/mols_title_iv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_toRightOf="@+id/mols_good_iv"
+                android:ellipsize="end"
+                android:lines="3"
+                android:textColor="@color/common_gray_text_color" />
+
+            <TextView
+                android:id="@+id/mols_price_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_toRightOf="@+id/mols_good_iv"
+                android:textColor="@color/common_red_color" />
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/mol_manygoods_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:focusable="false"
+            android:scrollbars="none"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/mol_goodsiv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10.0dip" />
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shadow_line" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:gravity="center_vertical"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip" >
+
+        <TextView
+            android:id="@+id/mol_realamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/mol_pjstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_follow_pressed_blue"
+            android:gravity="center"
+            android:paddingBottom="4.0dip"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip"
+            android:paddingTop="4.0dip"
+            android:singleLine="true"
+            android:text="评价"
+            android:textColor="@color/common_red_color"
+            android:textSize="12.0sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/un_pay_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/mol_cancelstatus"
+                android:layout_width="75.0dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/btn_follow_normal_gray"
+                android:gravity="center"
+                android:paddingBottom="4.0dip"
+                android:paddingTop="4.0dip"
+                android:singleLine="true"
+                android:text="取消订单"
+                android:textColor="@color/common_light_gray_text_color"
+                android:textSize="12.0sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/mol_paystatus"
+                android:layout_width="60.0dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_follow_pressed_blue"
+                android:gravity="center"
+                android:paddingBottom="4.0dip"
+                android:paddingTop="4.0dip"
+                android:singleLine="true"
+                android:text="支付"
+                android:textColor="@color/common_red_color"
+                android:textSize="12.0sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/alreay_pay_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="等待发货"
+            android:textColor="@color/common_red_color"
+            android:textSize="14.0sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mol_receiptStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_follow_pressed_blue"
+            android:gravity="center"
+            android:paddingBottom="4.0dip"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip"
+            android:paddingTop="4.0dip"
+            android:singleLine="true"
+            android:text="确认收货"
+            android:textColor="@color/common_red_color"
+            android:textSize="12.0sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="4.0dip"
+        android:background="@drawable/shadow_line" />
+
+</LinearLayout>

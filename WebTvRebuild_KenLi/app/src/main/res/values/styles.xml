@@ -1,0 +1,396 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme"></style>
+
+    <style name="MyAppTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/MyActivityPushAnimate</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/trans</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MyAppPhotoActivityTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/MyPhotoActivityFadeAnimate</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/trans</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MyActivityPushAnimate">
+        <item name="@android:activityOpenEnterAnimation">@anim/push_right_in</item>
+        <item name="@android:activityOpenExitAnimation">@anim/push_right_out</item>
+        <item name="@android:activityCloseEnterAnimation">@anim/push_left_in</item>
+        <item name="@android:activityCloseExitAnimation">@anim/push_left_out</item>
+    </style>
+
+    <style name="MyPhotoActivityFadeAnimate">
+        <item name="@android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="@android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="@android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="@android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="MyPopwindowAnimation">
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="CustomRadioStyle">
+        <item name="android:background">@drawable/trans</item>
+        <item name="android:drawableLeft">@drawable/radio_individual_style</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="CustomCheckboxStyle">
+        <item name="android:background">@drawable/trans</item>
+        <item name="android:drawableLeft">@drawable/checkbox_individual_style</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MyCustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 去除黑色边框的关键设置项 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 屏幕背景是否变暗 -->
+        <item name="android:backgroundDimAmount">0.2</item>
+    </style>
+
+    <style name="MyDialogAnimate" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <!-- Individual TextAppearance -->
+    <style name="MyRedButtonTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="MyModuleMenuTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="MyPersonMenuTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffc7c6c6</item>
+    </style>
+
+    <style name="MyHomeTitleTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ff32aae1</item>
+    </style>
+
+    <style name="MyHomeTabTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff32aae1</item>
+    </style>
+
+    <style name="MyHomeListTitleTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ff1f1f1f</item>
+    </style>
+
+    <style name="MyHomeListSummaryTextStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#ff848484</item>
+    </style>
+
+    <style name="MyHomeListTipsTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ff6e6e6e</item>
+    </style>
+
+    <style name="MyGeneralNewsDetailTitleTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyGeneralNewsDetailTipsTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffb2b2b2</item>
+    </style>
+
+    <style name="MyGeneralNewsDetailFooterTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff8d8d8d</item>
+    </style>
+
+    <style name="MyVideoListTitleTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyVideoListDurationTextStyle">
+        <item name="android:textSize">11.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="MyVideoNewsDetailTitleTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyVideoNewsDetailTipsTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ff9a9a9a</item>
+    </style>
+
+    <style name="MyLiveListTitleLightTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff9f9f9f</item>
+    </style>
+
+    <style name="MyPhotoListTitleTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyLoadingChineseTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff959595</item>
+    </style>
+
+    <style name="MyLoadingEnglishTextStyle">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#ff959595</item>
+    </style>
+
+    <style name="MyCommentTipsTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ff6e6e6e</item>
+    </style>
+
+    <style name="MyLoginSocialLogonTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyLoginLogonTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff878787</item>
+    </style>
+
+    <style name="MyLoginSelectedTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyLoginUnselectedTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff4b89d2</item>
+    </style>
+
+    <style name="MyLoginLogonInputTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyLoginRegisterNoticeTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ffd7d7d7</item>
+    </style>
+
+    <style name="MyRegisterVerifyNoticeTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyRegisterVerifyTipsTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff878787</item>
+    </style>
+
+    <style name="MyRegisterVerifyTipsRedTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ec6941</item>
+    </style>
+
+    <style name="MyRegisterVerifyTipsBlueTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff4b89d2</item>
+    </style>
+
+    <style name="MyRegisterModifyNicknameTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffd42c2c</item>
+    </style>
+
+    <style name="MyUploadUserInfoHeadIconTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#1f1f1f</item>
+    </style>
+
+    <style name="MyUploadUserInfoTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#1f1f1f</item>
+    </style>
+
+    <style name="MyUploadUserInfoInputTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ffafafaf</item>
+    </style>
+
+    <style name="MySuggestionTitleTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffc6c6c6</item>
+    </style>
+
+    <style name="MySuggestionContentTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MySettingsTextStyle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyReviewTitleTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff939393</item>
+    </style>
+
+    <style name="MyCollectionNormalTitleTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey_group_for_name</item>
+    </style>
+
+    <style name="MyCollectionNormalSummaryTextStyle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/grey_group_for_des</item>
+    </style>
+
+    <style name="MyShareContentSummaryTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ff9f9f9f</item>
+    </style>
+
+    <style name="MyAboutusContentTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff797979</item>
+    </style>
+
+    <style name="MyBrokeNewsListWhiteTextStyle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="MyBrokeCaptureTitleTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyBrokeCaptureTipsTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff9c9c9c</item>
+    </style>
+
+    <style name="MyRecommendNewsTitleTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#1f1f1f</item>
+    </style>
+
+    <style name="MyRecommendNewsTimeTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="MyRecommendNewsTitleWhiteTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="MyTopicHomeListSummaryTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff848484</item>
+    </style>
+
+    <style name="MyTopicDetailSummaryTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff6e6e6e</item>
+    </style>
+
+    <style name="MyTopicDetailSectionTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff2e2e2e</item>
+    </style>
+
+    <style name="MyCouponDetailDownloadTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <!-- tab -->
+    <style name="TabTextStyle">
+        <item name="android:textColor">@color/custom_tab_textcolor</item>
+    </style>
+
+    <style name="GuessTabTextStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="dot_style">
+        <item name="android:background">@drawable/dot_normal</item>
+        <item name="android:layout_width">7.0dip</item>
+        <item name="android:layout_height">7.0dip</item>
+        <item name="android:layout_marginLeft">1.5dip</item>
+        <item name="android:layout_marginRight">1.5dip</item>
+    </style>
+
+    <style name="pull2scrollHeaderStyle">
+        <item name="android:textColor">#A8A8A8</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- MyProgressDialog 设置一下progressDialog的风格 -->
+    <style name="myDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="myProgressDialog" parent="@style/myDialog">
+        <item name="android:windowBackground">@drawable/a5g</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <!-- Dialog -->
+    <style name="CustomDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- 自定义进度对话框 -->
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_choose</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">32dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.appsdk.advancedimageview.AdvancedImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_thumbnail_userlogo"
+        appsdk:aspectRatio="1.0"
+        appsdk:roundRadius="3"
+        appsdk:imageDefault="@drawable/default_thumbnail_userlogo"
+        appsdk:imageError="@drawable/default_thumbnail_userlogo"
+        appsdk:imageLoading="@drawable/default_thumbnail_userlogo" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:textColor="#8c8c8c"
+        android:textSize="12sp" />
+
+</LinearLayout>

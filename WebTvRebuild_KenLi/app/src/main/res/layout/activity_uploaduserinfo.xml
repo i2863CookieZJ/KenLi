@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_uploaduserinfo_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff7f7f7" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        android:id="@+id/header_ctv"
+        custom:style="operator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:c_title="@string/upload_userinfo_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/divider_layout"
+        android:layout_below="@+id/header_ctv"
+        android:layout_margin="8.0dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/mUploadUserInfoGetHeadIcon"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:background="@drawable/greybox_bound"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip"
+                android:text="@string/upload_userinfo_headicon"
+                android:textColor="@color/common_gray_text_color"
+                android:textSize="16.0sp" />
+
+            <com.appsdk.advancedimageview.AdvancedImageView
+                android:id="@+id/mUploadUserInfoHeadIcon"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:contentDescription="@null"
+                android:padding="5.0dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_thumbnail_userlogo"
+                appsdk:aspectRatio="1.0"
+                appsdk:imageDefault="@drawable/default_thumbnail_userlogo"
+                appsdk:imageError="@drawable/default_thumbnail_userlogo"
+                appsdk:imageLoading="@drawable/default_thumbnail_userlogo"
+                appsdk:roundRadius="2" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@drawable/shadow_line" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:shrinkColumns="1"
+            android:stretchColumns="1" >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/greybox_round_top_no_bottom_line"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:text="用户名"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/userNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:layout_margin="0.0dip"
+                    android:background="@color/transparent"
+                    android:gravity="center|right"
+                    android:paddingLeft="0.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textColorHint="@color/login_text_hint_color"
+                    android:textSize="16.0sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_line" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/greybox_round_top_no_bottom_line" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:text="@string/upload_userinfo_nick"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16.0sp" />
+
+                <EditText
+                    android:id="@+id/mUploadUserInfoNick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:layout_margin="0.0dip"
+                    android:background="@color/transparent"
+                    android:enabled="false"
+                    android:gravity="center|right"
+                    android:paddingLeft="0.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textColorHint="@color/login_text_hint_color"
+                    android:textSize="16.0sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_line" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/greybox_round_top_no_bottom_line" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:text="@string/upload_userinfo_sex"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/mUploadUserInfoSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:gravity="center|right"
+                    android:paddingRight="10.0dip"
+                    android:text="@string/upload_userinfo_sex_default"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textColorHint="@color/login_text_hint_color"
+                    android:textSize="16.0sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_line" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/greybox_round_top_no_bottom_line" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:text="@string/upload_userinfo_email"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16.0sp" />
+
+                <EditText
+                    android:id="@+id/mUploadUserInfoEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:layout_margin="0.0dip"
+                    android:background="@color/transparent"
+                    android:cursorVisible="false"
+                    android:gravity="center|right"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="0.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textColorHint="@color/login_text_hint_color"
+                    android:textSize="16.0sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_line" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/greybox_round_top_no_bottom_line" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:text="@string/upload_userinfo_phone"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16.0sp" />
+
+                <EditText
+                    android:id="@+id/mUploadUserInfoPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45.0dip"
+                    android:layout_margin="0.0dip"
+                    android:background="@color/transparent"
+                    android:cursorVisible="false"
+                    android:gravity="center|right"
+                    android:inputType="phone"
+                    android:paddingLeft="0.0dip"
+                    android:paddingRight="10.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textColorHint="@color/login_text_hint_color"
+                    android:textSize="16.0sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_line" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/mUploadUserInfoSubmitBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginTop="15.0dip"
+            android:background="@drawable/redbutton"
+            android:clickable="true"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="@string/upload_userinfo_submit"
+            android:textColor="@color/white"
+            android:textSize="18.0sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/user_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:padding="4.0dip"
+        android:src="@drawable/new_upersonal_center"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/group_search_search_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:text="搜索"
+            android:textColor="@color/common_dark_gray_text_color"
+            android:textSize="18.0sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/group_search_search_tv"
+            android:background="@drawable/group_search_edit_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/group_search_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_group_search_small" />
+
+            <ImageView
+                android:id="@+id/group_search_cha_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_group_deleter_small" />
+
+            <EditText
+                android:id="@+id/group_search_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/group_search_cha_iv"
+                android:layout_toRightOf="@+id/group_search_iv"
+                android:background="@null"
+                android:hint="搜索帖子"
+                android:paddingBottom="5.0dip"
+                android:paddingTop="8.0dip"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/home_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:background="@color/new_green"
+        android:orientation="horizontal"
+        android:padding="2.0dip"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/home_attention"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:button="@null"
+            android:checked="true"
+            android:drawableBottom="@drawable/community_main_radiobutton_blue_selector"
+            android:drawablePadding="10.0dip"
+            android:gravity="center"
+            android:paddingTop="5.0dip"
+            android:text="关注"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+
+        <RadioButton
+            android:id="@+id/home_activity"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:button="@null"
+            android:drawableBottom="@drawable/community_main_radiobutton_blue_selector"
+            android:drawablePadding="10.0dip"
+            android:gravity="center"
+            android:paddingTop="5.0dip"
+            android:text="活动"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+
+        <RadioButton
+            android:id="@+id/home_message"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:button="@null"
+            android:drawableBottom="@drawable/community_main_radiobutton_blue_selector"
+            android:drawablePadding="10.0dip"
+            android:gravity="center"
+            android:paddingTop="5.0dip"
+            android:text="资讯"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+    </RadioGroup>
+
+</FrameLayout>

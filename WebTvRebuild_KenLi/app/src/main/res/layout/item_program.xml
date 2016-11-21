@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+         android:padding="15dp"
+        android:layout_height="wrap_content" >
+	 <ImageView
+        android:id="@+id/campaign_logo_imageview"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+         />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="TextView"
+            android:textColor="#646464"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

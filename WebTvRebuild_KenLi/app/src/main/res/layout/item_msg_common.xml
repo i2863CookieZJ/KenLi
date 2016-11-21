@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="8dp" >
+
+            <com.sobey.cloud.webtv.ui.RoundImageView
+                android:id="@+id/item_msgcommon_headicon"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/item_msgcommon_headicon"
+                android:minHeight="60dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/item_msgcommon_who"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Who"
+                        android:textColor="#1f1f1f"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/item_msgcommon_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2015-12-17"
+                        android:textColor="#838383"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/item_msgcommon_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="我考虑将来是否看见了房间都是垃圾分类尽量减少了空间受到了房间了点时间来时的路口都散了"
+                        android:textColor="#838383"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/item_msgcommon_msgcount"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/red_msgnum_point2"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#fff000"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="76dp"
+            android:background="@drawable/shadow_line" />
+
+        <LinearLayout
+            android:id="@+id/item_msgcommon_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/item_msgcommon_replyuser"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#f7f7f7"
+                android:padding="8dp"
+                android:text="HeyGays:"
+                android:textColor="#838383"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item_msgcommon_replycontent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#f7f7f7"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:text="404342398@qq.com 楼主好人"
+                android:textColor="#838383"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_msgcommon_delitem"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="#ff0000"
+        android:gravity="center"
+        android:text="删除" />
+
+</LinearLayout>

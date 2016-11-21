@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_for_group_item"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/mycollect_goods_checkbox"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8.0dip"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip"
+            android:padding="10.0dip" >
+
+            <ImageView
+                android:id="@+id/mycollect_goods_pic_img"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/aboutus_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_thumbnail_banner" />
+
+            <TextView
+                android:id="@+id/mycollect_goods_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_toRightOf="@+id/mycollect_goods_pic_img"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="联想（Lenovo）U430P 14英寸超极本联想（Lenovo）U430P 14英寸超极本联想（Lenovo）U430P 14英寸超极本联想（Lenovo）U430P 14英寸超极本联想（Lenovo）U430P 14英寸超极本"
+                android:textColor="@color/common_dark_gray_text_color"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/mycollect_goods_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mycollect_goods_name_tv"
+                android:layout_marginLeft="10.0dip"
+                android:layout_toRightOf="@+id/mycollect_goods_pic_img"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="联想（Lenovo）U430P 14英寸超极本联想（Lenovo）U430P 14英寸超极本联想（Lenovo）U430P 14英寸超极本联想（Lenovo）U430P 14英寸超极本联想（Lenovo）U430P 14英寸超极本"
+                android:textColor="#ff7bbe5f"
+                android:textSize="12.0sp"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/mycollect_goods_pic_img"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dip" >
+
+                <TextView
+                    android:id="@+id/mycollect_goods_price_fake_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥8000"
+                    android:textColor="@color/grey"
+                    android:textSize="14.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/mycollect_goods_price_tv"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="￥8000"
+                    android:textColor="@color/common_red_color"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/mycollect_goods_addcart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_follow_pressed_blue"
+                    android:paddingBottom="4.0dip"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip"
+                    android:paddingTop="4.0dip"
+                    android:text="加入购物车"
+                    android:textColor="@color/common_red_color" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shadow_line" />
+
+</LinearLayout>

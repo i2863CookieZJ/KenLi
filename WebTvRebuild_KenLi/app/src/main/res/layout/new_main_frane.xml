@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/content_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:visibility="visible"
+        android:layout_marginTop="-16dp"
+        android:background="#01ffffff" >
+
+        <LinearLayout
+            android:id="@+id/bottomGuideBar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tab_bg"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/home_page_ll"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/home_page_iv"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/shouye_checked" />
+
+                <TextView
+                    android:id="@+id/home_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="首页"
+                    android:textColor="@color/common_red_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/quanzi_ll"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/quanzi_iv"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/quanzi_normal" />
+
+                <TextView
+                    android:id="@+id/quanzi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="圈子"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/new_temai_normal" />
+
+                <TextView
+                    android:id="@+id/ebusiness12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="特卖"
+                    android:textSize="12sp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/ebusiness1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="特卖"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/convenience_ll"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/convenience_iv"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/faxian_normal" />
+
+                <TextView
+                    android:id="@+id/convenience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="政务"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_profile_ll"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/my_profile_iv"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/wo_normal" />
+
+                <TextView
+                    android:id="@+id/my_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="我"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/ebusiness_fr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/ebusiness_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="68dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/new_temai_normal" />
+
+            <TextView
+                android:id="@+id/ebusiness"
+                android:layout_width="wrap_content"
+                android:layout_height="68dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:text="特卖"
+                android:visibility="gone"
+                android:textColor="#e10000"
+                android:textSize="10sp" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

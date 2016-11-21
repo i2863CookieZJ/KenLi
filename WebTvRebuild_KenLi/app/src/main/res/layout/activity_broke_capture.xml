@@ -1,0 +1,321 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_broke_capture_detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/mBrokeCaptureFooterCameraBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/button_broke_capture_footer_camera" />
+
+        <ImageButton
+            android:id="@+id/mBrokeCaptureFooterVideoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/button_broke_capture_footer_video" />
+
+        <ImageButton
+            android:id="@+id/mBrokeCaptureFooterLocalBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/button_broke_capture_footer_local" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/divider_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_above="@id/footer_layout"
+        android:background="@color/grey"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/login_tab_unselect"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/mBrokeCaptureHeaderBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/broke_capture_header_cancel_icon" />
+
+        <LinearLayout
+            android:id="@+id/mBrokeCaptureHeaderMoreLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/mBrokeCaptureHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="10dip"
+                android:textColor="@color/home_tab_text_focus"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@null"
+                android:scaleType="center"
+                android:src="@drawable/broke_capture_header_more_icon" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/mBrokeCaptureHeaderOKBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/broke_capture_header_ok_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tips_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/divider_layout"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <LinearLayout
+            android:id="@+id/mBrokeCaptureTelephoneLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:background="@drawable/greybox_greybackgound"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/mBrokeCapturePhoneImage"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:contentDescription="@null"
+                android:padding="5dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/broke_capture_telephone_icon_grey" />
+
+            <EditText
+                android:id="@+id/mBrokeCapturePhoneEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/brokecapture_contact_hint"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:paddingRight="5dip"
+                android:textAppearance="@style/MyBrokeCaptureTipsTextStyle"
+                android:textColorHint="@color/brokecapture_hint_color" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mBrokeCaptureLocationLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:background="@drawable/greybox_greybackgound"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/mBrokeCaptureLocationImage"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:contentDescription="@null"
+                android:padding="5dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/broke_capture_location_icon_grey" />
+
+            <EditText
+                android:id="@+id/mBrokeCaptureLocationEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/brokecapture_location_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingRight="5dip"
+                android:textAppearance="@style/MyBrokeCaptureTipsTextStyle"
+                android:textColorHint="@color/brokecapture_hint_color" >
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tips_layout"
+        android:layout_below="@id/header_layout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <EditText
+                    android:id="@+id/mBrokeCaptureTitleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="top"
+                    android:hint="@string/brokecapture_title_hint"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:padding="5dip"
+                    android:textAppearance="@style/MyBrokeCaptureTitleTextStyle"
+                    android:textColorHint="@color/brokecapture_hint_color" >
+                </EditText>
+            </LinearLayout>
+
+            <com.sobey.cloud.webtv.broke.util.BrokeCaptureGridView
+                android:id="@+id/mBrokeCaptureGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:choiceMode="multipleChoice"
+                android:drawSelectorOnTop="false"
+                android:gravity="center"
+                android:horizontalSpacing="5dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:padding="5dip"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dip" >
+            </com.sobey.cloud.webtv.broke.util.BrokeCaptureGridView>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/mSelectLayout"
+        android:layout_width="120dip"
+        android:layout_height="180dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dip"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/select_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/broke_capture_dropbox_top" />
+
+        <ImageView
+            android:id="@+id/select_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/broke_capture_dropbox_bottom" />
+
+        <ScrollView
+            android:id="@+id/select_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/select_bottom"
+            android:layout_below="@id/select_top"
+            android:background="@drawable/broke_capture_dropbox_middle"
+            android:clickable="true"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/mSelectListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mLoadingIconLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/loading_background_color" >
+
+        <TextView
+            android:id="@+id/loading_chinese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/loading_chinese"
+            android:textAppearance="@style/MyLoadingChineseTextStyle" />
+
+        <ProgressBar
+            android:id="@+id/loading_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/loading_chinese"
+            android:layout_centerHorizontal="true"
+            android:indeterminateDrawable="@drawable/loading_icon_drawable"
+            android:paddingBottom="5dip" />
+
+        <TextView
+            android:id="@+id/loading_english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loading_chinese"
+            android:layout_centerHorizontal="true"
+            android:text="@string/loading_english"
+            android:textAppearance="@style/MyLoadingEnglishTextStyle" />
+    </RelativeLayout>
+
+</RelativeLayout>

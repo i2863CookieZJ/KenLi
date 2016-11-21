@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <CheckBox
+        android:id="@+id/shop_card_cb"
+        style="@style/CustomCheckboxTheme"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/goodsHeaderIconContainer"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/shop_card_cb"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/newattention_item_headericon_border" >
+
+        <com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/goodsHeaderIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="1dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail_square"
+            appsdk:fadeInDuration="0.3"
+            appsdk:imageDefault="@drawable/default_thumbnail_square"
+            appsdk:imageError="@drawable/default_thumbnail_square"
+            appsdk:imageLoading="@drawable/default_thumbnail_square"
+            appsdk:roundRadius="2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rightContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/goodsHeaderIconContainer" >
+
+        <TextView
+            android:id="@+id/goodsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="2"
+            android:text="苹果笔记本/超级本迷你4口USB集线器优越者推出的便携式USB集线器Y-214"
+            android:textColor="@color/background"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/goodsPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/goodsTitle"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="2"
+            android:text="¥128.02"
+            android:textColor="@color/background"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/goodsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/goodsPrice"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="2"
+            android:text="数量 : 2"
+            android:textColor="#C00000"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/divider_full" />
+
+</RelativeLayout>

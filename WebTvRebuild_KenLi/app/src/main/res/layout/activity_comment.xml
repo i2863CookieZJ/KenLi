@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/mCommentHeader"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/comment_titlebar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="@string/comment_title"
+            android:textColor="@color/red"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/mCommentCloseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:padding="10dip"
+            android:src="@drawable/comment_close_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mCommentFooter"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/mCommentTextNumInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAppearance="@style/MyCommentTipsTextStyle" />
+
+        <ImageButton
+            android:id="@+id/mCommentPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/comment_submit_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mCommentDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_above="@id/mCommentFooter"
+        android:background="@color/grey"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/mCommentContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/mCommentDivider"
+        android:layout_below="@id/mCommentHeader"
+        android:background="@color/transparent"
+        android:gravity="top"
+        android:hint="@string/comment_hint"
+        android:imeOptions="actionSend"
+        android:inputType="textMultiLine"
+        android:padding="10dip"
+        android:textSize="18sp" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

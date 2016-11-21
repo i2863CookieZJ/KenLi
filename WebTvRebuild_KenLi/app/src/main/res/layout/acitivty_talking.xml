@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ac_talking_mainview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        android:id="@+id/header_ctv"
+        custom:style="back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:c_title="与xx交谈中" />
+
+    <LinearLayout
+        android:id="@+id/ac_talking_bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/shadow_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <EditText
+                android:id="@+id/ac_talking_msgedit"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:background="@drawable/activity_pl_bgedit"
+                android:drawableLeft="@drawable/activity_pl_icon"
+                android:paddingLeft="8dp" />
+
+            <Button
+                android:id="@+id/ac_talking_sendbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/greenbutton"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="发送"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/ac_talking_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ac_talking_bottomlayout"
+        android:layout_below="@id/header_ctv"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none"
+        android:transcriptMode="alwaysScroll" />
+
+    <include
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ac_talking_bottomlayout"
+        android:layout_below="@id/header_ctv"
+        layout="@layout/layout_loading_failed"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/loadingmask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_ctv"
+        layout="@layout/layout_loading_mask"
+        android:visibility="gone" />
+
+</RelativeLayout>

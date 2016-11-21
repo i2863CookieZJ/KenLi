@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        custom:style="single"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        custom:c_title="@string/app_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/home_attention_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:onClick="onClick" >
+
+            <RadioButton
+                android:id="@+id/home_attention"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:background="@drawable/home_radio_button"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="false"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="头条"
+                android:textColor="@color/home_radio_button_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_message_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClick" >
+
+            <RadioButton
+                android:id="@+id/home_message"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:background="@drawable/home_radio_button"
+                android:button="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:enabled="false"
+                android:text="广电"
+                android:textColor="@color/home_radio_button_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/home_live_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClick" >
+
+            <RadioButton
+                android:id="@+id/home_live"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:background="@drawable/home_radio_button"
+                android:button="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:enabled="false"
+                android:text="直播"
+                android:textColor="@color/home_radio_button_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_activity_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:onClick="onClick" >
+
+            <RadioButton
+                android:id="@+id/home_activity"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:background="@drawable/home_radio_button"
+                android:button="@null"
+                android:clickable="false"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="活动"
+                android:textColor="@color/home_radio_button_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/user_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:padding="4dp"
+            android:src="@drawable/new_upersonal_center"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#dcdcdc" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

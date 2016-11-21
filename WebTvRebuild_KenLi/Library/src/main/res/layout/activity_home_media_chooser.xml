@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/headerbar"
+        android:layout_above="@android:id/tabhost"
+        android:layout_alignParentTop="true"
+        layout="@layout/view_header_bar_media_chooser"
+        android:visibility="visible" >
+    </include>
+
+    <include
+        android:id="@+id/footerbar"
+        android:layout_above="@android:id/tabhost"
+        android:layout_alignParentBottom="true"
+        layout="@layout/view_footer_bar_media_chooser"
+        android:visibility="visible" >
+    </include>
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footerbar"
+        android:layout_below="@id/headerbar" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:orientation="horizontal" />
+
+            <FrameLayout
+                android:id="@+id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </android.support.v4.app.FragmentTabHost>
+
+</RelativeLayout>

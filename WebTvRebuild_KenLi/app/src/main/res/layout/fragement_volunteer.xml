@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/titlebartop"
+        layout="@layout/new_home_top" />
+
+    <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/mVolunteerNewsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titlebartop"
+        android:background="@color/new_livechannel_list_bgcolor"
+        android:divider="@drawable/divider_middle" />
+
+    <include
+        android:id="@+id/loadingMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titlebartop"
+        layout="@layout/loading_mask" />
+
+</RelativeLayout>

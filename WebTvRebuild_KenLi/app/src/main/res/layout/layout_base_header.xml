@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:src="@drawable/white_back_icon" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="48.0dip"
+            android:layout_marginRight="48.0dip"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="@color/common_dark_gray_text_color"
+            android:textSize="18.0sp" />
+
+        <RelativeLayout
+            android:id="@+id/operator_rl"
+            android:layout_width="48.0dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:id="@+id/operator_iv"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8.0dip" />
+
+            <ImageButton
+                android:id="@+id/mNewsdetailMore"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:contentDescription="@null"
+                android:scaleType="center"
+                android:visibility="gone"
+                android:src="@drawable/newsdetail_more_icon" />
+
+            <TextView
+                android:id="@+id/operator_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8.0dip"
+                android:text="修改"
+                android:textColor="@color/common_dark_gray_text_color"
+                android:textSize="16.0sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shadow_line" />
+
+</LinearLayout>

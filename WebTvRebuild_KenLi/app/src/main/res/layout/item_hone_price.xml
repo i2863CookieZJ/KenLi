@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="2.5dp"
+    android:paddingRight="2.5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:orientation="vertical" >
+       <com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/campaign_logo_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail_banner"
+            appsdk:aspectRatio="2.0"
+            android:paddingLeft="2.5dp"
+            android:paddingRight="2.5dp"
+            android:layout_gravity="center_vertical"
+            appsdk:fadeInDuration="0.3"
+            appsdk:imageDefault="@drawable/default_thumbnail_banner"
+            appsdk:imageError="@drawable/default_thumbnail_banner"
+            appsdk:imageLoading="@drawable/default_thumbnail_banner"
+            appsdk:roundRadius="3" />
+
+</LinearLayout>

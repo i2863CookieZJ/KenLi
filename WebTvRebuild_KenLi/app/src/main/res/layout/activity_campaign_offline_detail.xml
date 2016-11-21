@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/white"
+    android:gravity="center_horizontal" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        android:id="@+id/header_ctv"
+        custom:style="back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/mCampaigndetailFooter"
+        android:layout_width="fill_parent"
+        android:layout_height="54.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+
+        <Button
+            android:id="@+id/mCampaigndetailFooterSendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/selector_btn_follow_backgroud"
+            android:contentDescription="@null"
+            android:paddingBottom="5.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="5.0dip"
+            android:text="@string/campaign_article_live_send_text"
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/mCampaigndetailFooterSendEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toLeftOf="@+id/mCampaigndetailFooterSendBtn"
+            android:background="@drawable/box_background_round_grey"
+            android:cursorVisible="true"
+            android:drawableLeft="@drawable/activity_pl_icon"
+            android:drawablePadding="2.0dip"
+            android:gravity="center_vertical"
+            android:hint="@string/campaign_offline_detail_comment_notice"
+            android:inputType="textMultiLine"
+            android:padding="8.0dip"
+            android:textColor="@color/common_gray_text_color"
+            android:textColorHint="@color/common_light_gray_text_color"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/mCampaigndetailDivider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_above="@+id/mCampaigndetailFooter"
+        android:background="@color/grey" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/mCampaigndetailDivider"
+        android:layout_below="@+id/header_ctv" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.appsdk.advancedimageview.AdvancedImageView
+                android:id="@+id/mCampaigndetailImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_thumbnail_news"
+                appsdk:aspectRatio="1.78"
+                appsdk:imageDefault="@drawable/default_thumbnail_news"
+                appsdk:imageError="@drawable/default_thumbnail_news"
+                appsdk:imageLoading="@drawable/default_thumbnail_news" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/mCampaigndetailSummaryRl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8.0dip" >
+
+                    <TextView
+                        android:id="@+id/mCampaigndetailInfoTitleTextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/arrow_iv"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/common_dark_gray_text_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/mCampaigndetailSummaryTextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mCampaigndetailInfoTitleTextView"
+                        android:layout_toLeftOf="@+id/arrow_iv"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/common_light_gray_text_color"
+                        android:textSize="12.0sp" />
+
+                    <ImageView
+                        android:id="@+id/arrow_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/usercenter_arrow_small"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shadow_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:src="@drawable/icon_bm_time" />
+
+                    <TextView
+                        android:id="@+id/mCampaigndetailTimeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/common_light_gray_text_color"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shadow_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:src="@drawable/icon_bm_personnum" />
+
+                    <TextView
+                        android:id="@+id/mCampaigndetailSignUpSumTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/common_light_gray_text_color"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shadow_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="28.0dip"
+                        android:layout_height="28.0dip"
+                        android:src="@drawable/icon_bm_address" />
+
+                    <TextView
+                        android:id="@+id/mCampaigndetailAddressTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/common_light_gray_text_color"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shadow_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mCampaigndetailSummaryLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="5.0dip"
+                android:visibility="gone" >
+
+                <com.appsdk.advancedimageview.AdvancedImageView
+                    android:id="@+id/mCampaigndetailImageView_old"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.0"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_thumbnail_news"
+                    appsdk:aspectRatio="0.75"
+                    appsdk:imageDefault="@drawable/default_thumbnail_news"
+                    appsdk:imageError="@drawable/default_thumbnail_news"
+                    appsdk:imageLoading="@drawable/default_thumbnail_news" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/summary_red_icon_imageview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@null"
+                            android:src="@drawable/red_arrow_icon" />
+
+                        <TextView
+                            android:id="@+id/mCampaigndetailInfoTitleTextView_old"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5.0dip"
+                            android:layout_toLeftOf="@+id/summary_red_icon_imageview"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="20.0sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mCampaigndetailTimeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="20.0dip"
+                            android:layout_height="20.0dip"
+                            android:layout_marginRight="5.0dip"
+                            android:contentDescription="@null"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/red_clock_icon" />
+
+                        <TextView
+                            android:id="@+id/mCampaigndetailTimeTextView_old"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="#ff8c8c8c"
+                            android:textSize="16.0sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mCampaigndetailAddressLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="20.0dip"
+                            android:layout_height="20.0dip"
+                            android:layout_marginRight="5.0dip"
+                            android:contentDescription="@null"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/red_location_icon" />
+
+                        <TextView
+                            android:id="@+id/mCampaigndetailAddressTextView_old"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="#ff8c8c8c"
+                            android:textSize="16.0sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/mCampaigndetailSummaryTextView_old"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="4"
+                        android:textColor="#ff8c8c8c"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/mCampaigndetailFinishBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/campaign_offline_detail_sign_up_button"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/campaign_offline_detail_activity_finish"
+                android:textColor="@color/white"
+                android:textSize="18.0sp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/mCampaigndetailDoingLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <Button
+                    android:id="@+id/mCampaigndetailSignUpBtn"
+                    android:layout_width="240.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/selector_btn_follow_backgroud"
+                    android:gravity="center"
+                    android:text="@string/campaign_offline_detail_sign_up"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp" />
+
+                <TextView
+                    android:id="@+id/mCampaigndetailMaxTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="5.0dip"
+                    android:textColor="#ff8c8c8c"
+                    android:textSize="18.0sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/mCampaigndetailSignUpSumTextView_old"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_toLeftOf="@+id/mCampaigndetailSignUpBtn"
+                    android:layout_toRightOf="@+id/mCampaigndetailMaxTextView"
+                    android:gravity="right"
+                    android:textColor="#ff8c8c8c"
+                    android:textSize="18.0sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="4.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/shadow_line" />
+
+            <LinearLayout
+                android:id="@+id/mCampaigndetailNameListLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/namelist_red_icon_imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/red_arrow_icon" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/namelist_red_icon_imageview"
+                        android:paddingLeft="8.0dip"
+                        android:text="@string/campaign_offline_detail_name_list_title"
+                        android:textColor="@color/light_black"
+                        android:textSize="18.0sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/mCampaigndetailNameListContentLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8.0dip"
+                    android:background="@drawable/shadow_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mCampaigndetailDetailLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/left_detail_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_left" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_toRightOf="@+id/left_detail_iv"
+                        android:text="@string/campaign_offline_detail_detail_title"
+                        android:textColor="@color/common_dark_gray_text_color"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/usercenter_arrow_small" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/shadow_line" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8.0dip"
+                    android:background="@drawable/shadow_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mCampaigndetailAlbumLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/album_red_icon_imageview_old"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/red_arrow_icon"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/left_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_left" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_toRightOf="@+id/left_iv"
+                        android:text="@string/campaign_offline_detail_album_title"
+                        android:textColor="@color/common_dark_gray_text_color"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/usercenter_arrow_small" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/shadow_line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/mCampaigndetailAlbumContentLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                    <ImageView
+                        android:id="@+id/album_red_icon_imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8.0dip"
+                        android:contentDescription="@null"
+                        android:src="@drawable/usercenter_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8.0dip"
+                    android:background="@drawable/shadow_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mCampaigndetailCommentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/left_c_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_left" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_toRightOf="@+id/left_c_iv"
+                        android:text="@string/campaign_offline_detail_comment_title"
+                        android:textColor="@color/light_black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/shadow_line" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/mCampaigndetailCommentContentLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/mCampaigndetailCommentLoadMoreTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5.0dip"
+                    android:text="加载更多"
+                    android:textColor="#ff8c8c8c" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_ctv"
+        layout="@layout/layout_loading_mask"
+        android:visibility="gone" />
+
+</RelativeLayout>

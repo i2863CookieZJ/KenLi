@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_detail_activity_titlemore_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:padding="5dp" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/icon_group_title_up" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/group_title_menu_bg"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/group_detail_activity_sort_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="100dp"
+                android:button="@null"
+                android:enabled="false"
+                android:text="排序方式"
+                android:textColor="@color/grey_group_for_des"
+                android:textSize="12sp" />
+
+             <RadioButton
+                android:id="@+id/group_detail_activity_order_in_reply_cb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_for_group_title_menu_item"
+                android:button="@null"
+                android:padding="5dp"
+                android:checked="true"
+                android:text="按最新回复"
+                android:textColor="@color/selector_group_title_menu_item" />
+            
+            <RadioButton
+                android:id="@+id/group_detail_activity_order_in_publish_cb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/selector_for_group_title_menu_item"
+                android:button="@null"
+                android:padding="5dp"
+                android:text="按最新发布"
+                android:textColor="@color/selector_group_title_menu_item" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/group_detail_activity_filter_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/group_title_menu_bg"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="100dp"
+                android:button="@null"
+                android:enabled="false"
+                android:text="浏览方式"
+                android:textColor="@color/grey_group_for_des"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/group_detail_activity_order_in_checkall_cb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_for_group_title_menu_item"
+                android:button="@null"
+                android:checked="true"
+                android:padding="5dp"
+                android:text="查看全部"
+                android:textColor="@color/selector_group_title_menu_item" />
+
+            <RadioButton
+                android:id="@+id/group_detail_activity_order_in_checkessence_cb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/selector_for_group_title_menu_item"
+                android:button="@null"
+                android:padding="5dp"
+                android:text="只看精华"
+                android:textColor="@color/selector_group_title_menu_item" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

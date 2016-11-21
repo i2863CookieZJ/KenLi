@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.dylan.uiparts.mycamera.MyCameraLayout
+        android:id="@+id/mBrokeCameraTakeContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/mBrokeCameraTakeOpenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/mBrokeCameraTakeOpenImageTopVideo"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/broke_camera_take_open_backgound_top_video" />
+        
+        <ImageView
+            android:id="@+id/mBrokeCameraTakeOpenImageTopPicture"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/broke_camera_take_open_backgound_top_picture" />
+
+        <ImageView
+            android:id="@+id/mBrokeCameraTakeOpenImageBottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/broke_camera_take_open_backgound_bottom" />
+    </LinearLayout>
+
+</RelativeLayout>

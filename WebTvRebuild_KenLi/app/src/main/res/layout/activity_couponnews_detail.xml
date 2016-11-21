@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:id="@+id/activity_generalnews_detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/mCoupondetailFooter"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/coupon_detail_download_background"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/coupon_detail_download_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="10dip"
+            android:text="@string/coupon_detail_down"
+            android:textAppearance="@style/MyCouponDetailDownloadTextStyle" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mCoupondetailTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/titlebar_background" >
+
+        <ImageButton
+            android:id="@+id/mCoupondetailBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_back_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dip"
+            android:text="@string/coupon_detail_title"
+            android:textAppearance="@style/MyHomeTitleTextStyle" />
+        
+        <ImageButton
+            android:id="@+id/mCoupondetailPicture"
+            android:layout_width="43dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/broke_task_list_picture_icon" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/mCoupondetailContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mCoupondetailFooter"
+        android:layout_below="@id/mCoupondetailTitleLayout" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <WebView
+                android:id="@+id/mCoupondetailWebview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

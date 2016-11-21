@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:id="@+id/horizontal_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitem_background" >
+
+    <RelativeLayout
+        android:id="@+id/linn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/my_message_head_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail_banner"
+            appsdk:aspectRatio="1.0"
+            appsdk:fadeInDuration="0.3"
+            appsdk:imageDefault="@drawable/default_thumbnail_banner"
+            appsdk:imageError="@drawable/default_thumbnail_banner"
+            appsdk:imageLoading="@drawable/default_thumbnail_banner"
+            appsdk:roundRadius="90" />
+
+        <LinearLayout
+            android:id="@+id/my_message_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/my_message_arror_iv"
+            android:layout_toRightOf="@+id/my_message_head_iv"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/my_message_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="用户个人id"
+                android:textColor="@color/blue_for_group_like_username"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/my_message_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="用户发布的信息"
+                android:textColor="@color/grey_group_for_name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/my_message_addtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="15-4-7 12:34"
+                android:textColor="@color/grey_group_for_des"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/my_message_arror_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/aboutus_content"
+            android:src="@drawable/icon_right_arror" />
+    </RelativeLayout>
+
+</LinearLayout>

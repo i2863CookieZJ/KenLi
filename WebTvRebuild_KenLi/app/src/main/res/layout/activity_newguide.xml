@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/newguide_backgound_color"
+    android:orientation="vertical" >
+
+    <com.sobey.cloud.webtv.utils.SwitchLayout
+        android:id="@+id/mNewGuideSwitchLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="20dip"
+            android:paddingLeft="30dip"
+            android:paddingRight="30dip"
+            android:paddingBottom="50dip"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/newguide_image1" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="20dip"
+            android:paddingLeft="30dip"
+            android:paddingRight="30dip"
+            android:paddingBottom="50dip"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/newguide_image2" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="20dip"
+            android:paddingLeft="30dip"
+            android:paddingRight="30dip"
+            android:paddingBottom="50dip"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/newguide_image3" />
+
+        <ImageView
+            android:id="@+id/mNewGuideStartBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="20dip"
+            android:paddingLeft="30dip"
+            android:paddingRight="30dip"
+            android:paddingBottom="50dip"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/newguide_image4" />
+    </com.sobey.cloud.webtv.utils.SwitchLayout>
+
+    <LinearLayout
+        android:id="@+id/mNewGuideDotLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dip"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="8dip"
+            android:layout_height="8dip"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:layout_margin="6dip"
+            android:contentDescription="@null"
+            android:src="@drawable/newguide_dot" />
+
+        <ImageView
+            android:layout_width="8dip"
+            android:layout_height="8dip"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:layout_margin="6dip"
+            android:contentDescription="@null"
+            android:src="@drawable/newguide_dot" />
+
+        <ImageView
+            android:layout_width="8dip"
+            android:layout_height="8dip"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:layout_margin="6dip"
+            android:contentDescription="@null"
+            android:src="@drawable/newguide_dot" />
+
+        <ImageView
+            android:layout_width="8dip"
+            android:layout_height="8dip"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:layout_margin="6dip"
+            android:contentDescription="@null"
+            android:src="@drawable/newguide_dot" />
+    </LinearLayout>
+
+</RelativeLayout>

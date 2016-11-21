@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">无线垦利</string>
+    <string name="json_info">正在加载&#8230;</string>
+    <string name="zero">0</string>
+    <string name="app_client_downloading">无线垦利正在下载...</string>
+    <string name="app_client_update_error">下载失败，请检查您的网络连接</string>
+    
+    <!-- 政务 -->
+    <string name="zhengwu_item0">政务新闻</string>
+    <string name="zhengwu_item1">公告公示</string>
+    <string name="zhengwu_item2">政务动态</string>
+    <string name="zhengwu_item3">政策法规</string>
+    <string name="zhengwu_item4">证件办理</string>
+
+    <!-- Toast -->
+    <string name="toast_net_dis_connect">网络已经断开</string>
+    <string name="toast_net_connect">网络已经连接</string>
+    <string name="personmenu_clicklogin">登录/注册</string>
+    <string name="personmenu_alllogin">用QQ或微博等账号一键登录</string>
+    <string name="personmenu_setting">设置</string>
+    <string name="search_cancel">取消</string>
+    <string name="search_confirm">确定</string>
+    <string name="share_title">分享</string>
+    <string name="search_hint">搜索</string>
+    <string name="newsdetail_leavemessage">我来说两句&#160;&#160;&#160;&#160;</string>
+    <string name="comment_title">评论</string>
+    <string name="comment_hint">我来说两句</string>
+    <string name="share_all">一键分享</string>
+    <string name="share_sinawb">新浪微博</string>
+    <string name="share_tencentwb">腾讯微博</string>
+    <string name="share_qzone">QQ空间</string>
+    <string name="share_weixin">微信好友</string>
+    <string name="share_friend">微信朋友圈</string>
+    <string name="share_qq">QQ</string>
+    <string name="share_message">短信</string>
+    <string name="share_email">邮件</string>
+    <string name="share_hint">分享我的心得&#8230;</string>
+    <string name="popwindow_showpicture">2G/3G网络为无图模式</string>
+    <string name="popwindow_nightmode">夜间模式</string>
+    <string name="popwindow_fontsize">字体大小</string>
+    <string name="popwindow_takephoto">拍照</string>
+    <string name="popwindow_selectpicture">从相册选取</string>
+    <string name="popwindow_phone_title">请输入您的手机号码</string>
+    <string name="popwindow_phone_ok">确认</string>
+    <string name="popwindow_phone_cancel">暂不提供</string>
+    <string name="loading_chinese">正在加载&#8230;</string>
+    <string name="loading_english"></string>
+    <string name="loading_failed_try_again">加载失败</string>
+    <string name="login_social_logon">您可以使用以下方式快速登录</string>
+    <string name="login_password">密&#160;&#160;码</string>
+    <string name="login_username">用户名</string>
+    <string name="login_email">邮&#160;&#160;箱</string>
+    <string name="login_password_hint">请输入密码</string>
+    <string name="login_username_hint">请输入注册手机号</string>
+    <string name="login_register_username_notice">小写字母开头，4到16位数字、下划线组成</string>
+    <string name="login_register_password_notice">仅允许字母和数字，6到16个字节，区分大小写</string>
+    <string name="login_logon_submit">登&#160;&#160;录</string>
+    <string name="login_register_phone_hint">请输入您的手机号</string>
+    <string name="login_register_email_hint">请输入邮箱</string>
+    <string name="login_register_password_hint">请设置密码</string>
+    <string name="login_register_submit">注&#160;&#160;册</string>
+    <string name="register_verify_title">手机号注册</string>
+    <string name="register_verify_tips">您将会收到一条带验证码的短信，请输入验证码</string>
+    <string name="register_verify_hint">请输入手机号收到的验证码</string>
+    <string name="register_verify_submit">下一步</string>
+    <string name="register_modify_nickname_notice">注册成功！</string>
+    <string name="register_modify_nickname_tips">第一印象很重要，给自己取个昵称吧！</string>
+    <string name="register_modify_nickname_hint">支持中文、英文和数字，最长14字节</string>
+    <string name="register_modify_nickname_submit">提&#160;&#160;交</string>
+    <string name="upload_userinfo_title">编辑个人信息</string>
+    <string name="upload_userinfo_headicon">更换头像</string>
+    <string name="upload_userinfo_nick">昵称</string>
+    <string name="upload_userinfo_sex">性别</string>
+    <string name="upload_userinfo_sex_default">男</string>
+    <string name="upload_userinfo_email">邮箱</string>
+    <string name="upload_userinfo_phone">手机</string>
+    <string name="upload_userinfo_submit">修改</string>
+    <string name="suggestion_title">意见反馈</string>
+    <string name="settings_title">设置</string>
+    <string name="settings_nopicturemode">无图模式</string>
+    <string name="settings_nightmode">夜间模式</string>
+    <string name="settings_autohide">正文工具栏自动隐藏</string>
+    <string name="settings_fontsize">字号大小</string>
+    <string name="settings_clear">清除缓存</string>
+    <string name="settings_newguide">新手引导</string>
+    <string name="settings_aboutus">关于我们</string>
+    <string name="settings_update">检查更新</string>
+    <string name="settings_logout">注&#160;&#160;销</string>
+    <string name="myreview_title">我的评论</string>
+    <string name="aboutus_title">关于我们</string>
+    <string name="aboutus_content">&#160;&#160;&#160;&#160;奉贤区广播电视台隶属于奉贤区文化广播影视管理局，是全民所有制全额拨款的副处级事业单位，2000年被国家广电总局评为“全国广播电视先进县”；曾荣获2001~2002年度、2003~2004年度、2007~2008年度、2009~2010年度、2011~2012年度上海市文明单位。目前全台拥有事业编制86人，在编85人。下设总编室、新闻一部、新闻二部、广播文艺部、电视专题部、技术部、广告部、办公室等8个职能部门。<br />&#160;&#160;&#160;&#160;奉贤区广播电视台目前拥有国家广电总局颁证许可的电视频道（48CH）一个，每天播出时长17小时（7:00~24:00）。主打电视新闻栏目《奉视新闻》、电视民生类新闻栏目《贤城说事》、电视专题栏目《滨海纪事》。<br />&#160;&#160;&#160;&#160;奉贤区广播电视台目前还拥有国家广电总局颁证许可的广播频率95.9MHZ一个，每天播出时长16小时（6:00~22:00）。奉贤人民广播电台95.9频率命名为“阳光959”，频率定位为“资讯＋音乐＋服务”模式，主打节目有《午后红茶》、《一路听吧》、《话说奉贤》、《阳光热线》、《健康新概念》等。<br />&#160;&#160;&#160;&#160;自2012年1月起，奉贤区广播电视台推出《奉贤广电》杂志，使之成为宣传推介奉贤广播电视事业的新平台。<br />&#160;&#160;&#160;&#160;为了适应新的传播时代的要求，2013年我台大力推进网络新媒体建设。目前，我台已经在新浪微博上开设“奉贤广播电视台”，“奉贤TV贤城说事”，“奉贤Radio阳光959”三大官方微博；并且在腾讯微信上开办了“今日奉贤”、“FTV贤城说事”、“阳光959”三大微信订阅号，每日将最新的新闻资讯推荐给普通奉贤观众和网民。</string>
+    <string name="broke_footerbar_news_text">最新</string>
+    <string name="broke_footerbar_my_text">我的</string>
+    <string name="broke_footerbar_task_text">任务</string>
+    <string name="broke_footerbar_play_text">玩法</string>
+    <string name="brokecapture_title_hint">请输入新闻\n请务必填写联系电话以便提供奖励</string>
+    <string name="brokecapture_contact_hint">输入电话</string>
+    <string name="brokecapture_location_hint">插入位置</string>
+    <string name="collection_title">收藏</string>
+    <string name="coupon_detail_down">下载到手机</string>
+    <string name="coupon_detail_title">优惠券详情</string>
+    <string name="coupon_detail_image">优惠券图片</string>
+
+    <!-- ListView Header Footer -->
+    <string name="listview_header_notice_normal">下拉刷新</string>
+    <string name="listview_header_notice_ready">松开刷新数据</string>
+    <string name="listview_header_notice_loading">正在刷新&#8230;</string>
+    <string name="listview_header_last_time">上次刷新时间：</string>
+    <string name="listview_footer_notice_normal">查看更多</string>
+    <string name="listview_footer_notice_ready">松开载入更多</string>
+
+    <!-- Guess Home -->
+    <string name="guess_home_mine_times">竞猜次数</string>
+    <string name="guess_home_mine_right">正确次数</string>
+    <string name="guess_home_mine_record">竞猜记录</string>
+    <string name="guess_home_mine_list_title1">题目</string>
+    <string name="guess_home_mine_list_title2">状态</string>
+    <string name="guess_home_mine_list_title3">竞猜结果</string>
+
+    <!-- Campaign -->
+    <string name="campaign_article_live_send_text">发送</string>
+    <string name="campaign_article_live_comment_area">评论区</string>
+
+    <!-- Campaign Offline Detail -->
+    <string name="campaign_offline_detail_activity_finish">活动已结束</string>
+    <string name="campaign_offline_detail_sign_up_finish">报名结束</string>
+    <string name="campaign_offline_detail_sign_up">立即报名</string>
+    <string name="campaign_offline_detail_have_sign_up">已报名</string>
+    <string name="campaign_offline_detail_name_list_title">获选名单</string>
+    <string name="campaign_offline_detail_album_title">活动相册</string>
+    <string name="campaign_offline_detail_comment_title">活动讨论</string>
+    <string name="campaign_offline_detail_summary_content_title">活动详情</string>
+    <string name="campaign_offline_detail_name_content_title">获选名单</string>
+    <string name="campaign_offline_detail_name_content_subtitle">全部获选名单</string>
+    <string name="campaign_offline_detail_album_content_title">活动相册</string>
+    <string name="campaign_offline_detail_comment_notice">参与讨论</string>
+    <!-- 下拉刷新 -->
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="pull_to_up">上拉刷新</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="no_more_data">更多数据</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="release_to_refresh">松开刷新</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="time_error">时间有问题</string>
+
+    <!-- 音频播放 -->
+    <string name="audio_living">播放中</string>
+
+    <!-- 圈子中相关提示 -->
+
+    <string name="request_data_failed">获取数据失败</string>
+    <!-- 搜索页面 -->
+    <string name="search_group">搜圈子</string>
+    <string name="search_hit_for_group">搜索圈子</string>
+    <string name="search_subject">搜帖</string>
+    <string name="search_hit_for_subject">搜索帖子</string>
+    <string name="clear_search_record">清除搜索记录</string>
+    <string name="no_record">暂无搜索记录</string>
+    <string name="no_result">无搜索结果</string>
+    <string name="has_no_result">暂无内容</string>
+
+    <!-- 发布主题页面 -->
+    <string name="subject_title">标题(必填)</string>
+    <string name="subject_content">内容</string>
+    <string name="post_subject">发布主题</string>
+    <string name="post">发表</string>
+    <string name="picture">照片</string>
+    <string name="friend">好友</string>
+    <string name="send">发送</string>
+    <string name="uploading_pic">正在上传图片&#8230;</string>
+    <string name="uploading_data">正在上传数据&#8230;</string>
+    <string name="uploading_data_tips">正在上传数据&#8230;已执行%1$s张，共%2$s张</string>
+    <string name="uploading_failed_size">%1$s张上传失败</string>
+    <string name="post_success">发布成功</string>
+    <string name="post_failed">发布失败</string>
+
+    <!-- 发布回复页面 -->
+    <string name="post_comment_success">评论发布成功</string>
+    <string name="post_comment_failed">评论发布失败</string>
+    <string name="posting_comment_do_it_later">正在发布评论，请稍后再试！</string>
+    <!-- 主题详情页面 -->
+    <string name="reply">回复</string>
+    <string name="reply_success">回复成功</string>
+    <string name="reply_failed">回复失败</string>
+    <string name="post_like_comment_fail">点赞失败，请稍后再试</string>
+    <string name="reply_content_too_less_tips">您输入内容过少，少于10个字符</string>
+    <string name="page_not_exist_input_again">该页不存在，请重新输入</string>
+    <string name="collect_success">已收藏</string>
+    <string name="cancel_collect_success">已取消收藏</string>
+    <string name="have_no_share_url_can_not_share">未获取到分享地址，无法分享</string>
+    <string name="follow">关注</string>
+    <string name="cancel_follow">取消关注</string>
+    <string name="private_letter">私信</string>
+    <string name="notice">通知</string>
+    <string name="my_address">收货地址</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="all_photos">全部图片</string>
+    <string name="done">完成</string>
+    <string name="no_photos_choosed_by_you">您未选择图片！</string>
+    <string name="out_of_max_photo_size">最多选取%1$d张图片</string>
+    <string name="this_file_not_available">该文件不可用！</string>
+    <string name="sure_to_resend">是否重新发送？</string>
+    <string name="oder_status1">待付款</string>
+    <string name="oder_status2">待确认收货</string>
+    <string name="oder_status3">订单取消</string>
+    <string name="oder_status4">订单作废</string>
+    <string name="oder_status5">订单完成</string>
+    <string name="oder_status6">退款</string>
+    <string name="oder_status7">部分退款</string>
+    
+    <!-- 活动详情 -->
+    <string name="campaign_offline_detail_detail_title">活动详情</string>
+
+</resources>

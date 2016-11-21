@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/chat_left_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/chat_left_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="2015-5-5 15:00"
+            android:textColor="@color/grey_group_for_des"
+            android:textSize="12sp" />
+
+        <com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/chat_left_head_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/chat_left_time_tv"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail_banner"
+            appsdk:aspectRatio="1.0"
+            appsdk:fadeInDuration="0.3"
+            appsdk:imageDefault="@drawable/default_thumbnail_banner"
+            appsdk:imageError="@drawable/default_thumbnail_banner"
+            appsdk:imageLoading="@drawable/default_thumbnail_banner"
+            appsdk:roundRadius="90" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chat_left_time_tv"
+            android:layout_marginRight="60dp"
+            android:layout_toRightOf="@+id/chat_left_head_iv"
+            android:background="@drawable/icon_group_personal_chat_left"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/chat_left_content_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发送普通文本内容，如果内容包含外链，则点击跳转发送普通文本内容，如果内容包含外链，则点击跳转发送普通文本内容，如果内容包含外链，则点击跳转"
+                    android:textColor="@color/grey_group_for_name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/chat_left_content_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="发送普通文本内容，如果内容包含外链，则点击跳转发送普通文本内容，如果内容包含外链，则点击跳转发送普通文本内容，如果内容包含外链，则点击跳转"
+                    android:textColor="@color/grey_group_for_des"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/chat_right_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/chat_right_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="2015-5-5 15:00"
+            android:textColor="@color/grey_group_for_des"
+            android:textSize="12sp" />
+
+        <!--
+         <com.appsdk.advancedimageview.AdvancedImageView
+        android:id="@+id/chat_head_iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/chat_time_tv"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/default_thumbnail_banner"
+        appsdk:aspectRatio="1.0"
+        appsdk:fadeInDuration="0.3"
+        appsdk:imageDefault="@drawable/default_thumbnail_banner"
+        appsdk:imageError="@drawable/default_thumbnail_banner"
+        appsdk:imageLoading="@drawable/default_thumbnail_banner"
+        appsdk:roundRadius="90" />
+        -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chat_right_time_tv"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="20dp" >
+
+
+            <LinearLayout
+                android:id="@+id/chat_content_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/icon_group_personal_chat_right"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/chat_right_content_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发送普通文"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/chat_right_content_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text=""
+                        android:textColor="#DBF4DF"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout
+                android:id="@+id/chat_tips_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/chat_content_layout"
+                android:layout_centerVertical="true" >
+
+                <ProgressBar
+                    android:id="@+id/chat_pb"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                     />
+
+                <Button
+                    android:id="@+id/chat_send_error_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:background="@drawable/selector_btn_send_error"
+                     />
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

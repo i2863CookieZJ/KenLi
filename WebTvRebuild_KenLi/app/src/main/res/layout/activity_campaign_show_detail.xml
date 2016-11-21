@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/white"
+    android:gravity="center_horizontal" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        android:id="@+id/header_ctv"
+        custom:style="back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/mCampaigndetailDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/header_ctv"
+        android:background="@color/grey" />
+
+    <com.appsdk.androidadvancedui.AdvancedListView
+        android:id="@+id/mCampaigndetailListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mCampaigndetailDivider"
+        android:divider="@null" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header_ctv"
+        layout="@layout/layout_loading_mask"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/mCampaigndetail_addp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="12"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

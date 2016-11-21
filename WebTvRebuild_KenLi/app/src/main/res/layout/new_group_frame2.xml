@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/grey_group_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/new_home_top2_helan" />
+
+    <include layout="@layout/layout_loading_mask" />
+
+    <LinearLayout
+        android:id="@+id/search_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="3.0dip"
+            android:background="@drawable/search_bg"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:text="搜索帖子"
+                android:textColor="@color/common_light_gray_text_color"
+                android:textSize="13.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/group_frame_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_group_bg"
+        android:divider="@color/grey_group_bg"
+        android:dividerHeight="1.0dip"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/layout_loading_failed"
+        android:visibility="gone" />
+
+</LinearLayout>

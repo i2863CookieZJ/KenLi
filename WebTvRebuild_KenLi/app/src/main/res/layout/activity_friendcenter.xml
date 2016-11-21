@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff3f3f3"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="160.0dip"
+        android:background="@drawable/bg_friends_center" >
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="48.0dip"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:onClick="onClick" >
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:src="@drawable/white_back_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/back_iv"
+                android:text="返回"
+                android:textColor="@color/common_gray_text_color"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <com.sobey.cloud.webtv.ui.RoundImageView
+            android:id="@+id/ac_fdcenter_headicon"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/default_head" />
+
+        <TextView
+            android:id="@+id/ac_fdcenter_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ac_fdcenter_headicon"
+            android:layout_marginTop="8.0dip"
+            android:gravity="center"
+            android:text="username"
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/ac_fdcenter_zxbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:button="@null"
+            android:drawableBottom="@drawable/friendcenter_btncheck"
+            android:gravity="center"
+            android:text="资讯"
+            android:textColor="#ff1f1f1f"
+            android:textSize="16.0sp" />
+
+        <RadioButton
+            android:layout_width="50.0dip"
+            android:layout_height="fill_parent"
+            android:button="@null"
+            android:padding="0.0dip" />
+
+        <RadioButton
+            android:id="@+id/ac_fdcenter_tzbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:button="@null"
+            android:drawableBottom="@drawable/friendcenter_btncheck"
+            android:gravity="center"
+            android:text="帖子"
+            android:textColor="#ff1f1f1f"
+            android:textSize="16.0sp" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="4.0dip"
+        android:background="@drawable/shadow_line" />
+
+    <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/ac_fdcenter_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_below="@+id/header_ctv"
+        android:layout_weight="1.0"
+        android:background="@color/white"
+        android:divider="@null"
+        android:dividerHeight="0.0dip"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shadow_line" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="42.0dip"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/ac_fdcenter_addguanzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#00000000"
+                android:drawableLeft="@drawable/action_guanzhu"
+                android:drawablePadding="0.0dip"
+                android:gravity="center"
+                android:text="关注"
+                android:textColor="@color/common_dark_gray_text_color"
+                android:textSize="16.0sp" />
+
+            <Button
+                android:id="@+id/ac_fdcenter_delguanzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#00000000"
+                android:drawableLeft="@drawable/action_cancelguanzhu"
+                android:drawablePadding="0.0dip"
+                android:gravity="center"
+                android:text="取消关注"
+                android:textColor="#ff1f1f1f"
+                android:textSize="16.0sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/ac_fdcenter_sendmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#00000000"
+                android:drawableLeft="@drawable/sixin"
+                android:drawablePadding="4.0dip"
+                android:gravity="center"
+                android:text="私信"
+                android:textColor="@color/common_dark_gray_text_color"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

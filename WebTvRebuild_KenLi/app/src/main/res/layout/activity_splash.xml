@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.appsdk.advancedimageview.AdvancedImageView
+        android:id="@+id/mSplashImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash_image"
+        appsdk:imageDefault="@drawable/splash_image"
+        appsdk:imageError="@drawable/splash_image"
+        appsdk:imageLoading="@drawable/splash_image" />
+
+    <TextView
+        android:id="@+id/mSplashText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dip"
+        android:background="@drawable/greybox_splash_text_background"
+        android:paddingBottom="3dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="3dip"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

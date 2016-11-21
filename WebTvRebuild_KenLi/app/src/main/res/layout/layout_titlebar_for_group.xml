@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="@color/new_green"
+    android:orientation="horizontal" >
+
+    <ImageButton
+        android:id="@+id/titlebar_module"
+        android:layout_width="54dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/titlebar_menu_icon"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/top_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:background="@color/transparent"
+        android:contentDescription="@null"
+        android:onClick="onClick"
+        android:paddingBottom="12dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="12dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/selector_group_title_back" />
+
+    <TextView
+        android:id="@+id/titlebar_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:drawableRight="@drawable/selector_btn_group_title_down"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="5dip"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/titlebar_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/selector_btn_group_edit" />
+
+</RelativeLayout>

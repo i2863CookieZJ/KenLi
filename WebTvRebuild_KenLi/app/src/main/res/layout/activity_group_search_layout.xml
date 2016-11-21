@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/grey_group_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/title_layout_for_group_searcht" />
+
+    <RadioGroup
+        android:id="@+id/group_search_radio_group"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_below="@+id/top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/group_search_subject_btn"
+            android:layout_width="120.0dip"
+            android:layout_height="30.0dip"
+            android:background="@drawable/selector_cb_group_search_subject"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/search_subject"
+            android:textColor="@color/selector_group_search_cb_text" />
+
+        <RadioButton
+            android:id="@+id/group_search_group_btn"
+            android:layout_width="120.0dip"
+            android:layout_height="30.0dip"
+            android:background="@drawable/selector_cb_group_search_group"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/search_group"
+            android:textColor="@color/selector_group_search_cb_text" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/group_search_radio_group"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:id="@+id/group_search_result_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/group_search_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/grey_group_bg"
+                android:dividerHeight="1.0dip"
+                android:listSelector="@drawable/selector_for_group_item" />
+
+            <TextView
+                android:id="@+id/group_search_clear_result_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center"
+                android:text="@string/clear_search_record"
+                android:textColor="@color/red_for_group_2"
+                android:textSize="16.0sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/group_search_no_record_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40.0dip"
+            android:gravity="center"
+            android:text="@string/no_record"
+            android:textColor="@color/red_for_group_2"
+            android:textSize="16.0sp"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/layout_loading_mask"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

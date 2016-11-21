@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/new_backgroud" >
+
+    <com.handmark.pulltorefresh.library.Pull2RefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrMode="pullFromStart"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrDrawable="@drawable/pull_loading_icon"
+        ptr:ptrHeaderTextAppearance="@style/pull2scrollHeaderStyle"
+        ptr:ptrHeaderTextColor="#A8A8A8"
+        ptr:ptrScrollingWhileRefreshingEnabled="false"
+         >
+
+        <LinearLayout
+            android:id="@+id/new_message_Lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/banner_re"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/new_mess_vp_back"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/vp_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/imgDian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="3.0dip"
+                        android:gravity="center" >
+
+                        <View
+                            android:id="@+id/v_dot0"
+                            style="@style/dot_style"
+                            android:background="@drawable/dot_focused" />
+
+                        <View
+                            android:id="@+id/v_dot1"
+                            style="@style/dot_style" />
+
+                        <View
+                            android:id="@+id/v_dot2"
+                            style="@style/dot_style" />
+
+                        <View
+                            android:id="@+id/v_dot3"
+                            style="@style/dot_style" />
+
+                        <View
+                            android:id="@+id/v_dot4"
+                            style="@style/dot_style" />
+
+                        <View
+                            android:id="@+id/v_dot5"
+                            style="@style/dot_style" />
+
+                        <View
+                            android:id="@+id/v_dot6"
+                            style="@style/dot_style" />
+
+                        <View
+                            android:id="@+id/v_dot7"
+                            style="@style/dot_style" />
+
+                        <View
+                            android:id="@+id/v_dot8"
+                            style="@style/dot_style" />
+
+                        <View
+                            android:id="@+id/v_dot9"
+                            style="@style/dot_style" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.Pull2RefreshScrollView>
+
+    <include
+        android:id="@+id/mLoadingIconLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/loading_mask"
+        android:visibility="gone" />
+
+</RelativeLayout>

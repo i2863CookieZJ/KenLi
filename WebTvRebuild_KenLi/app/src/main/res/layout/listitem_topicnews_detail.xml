@@ -1,0 +1,505 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.appsdk.advancedimageview.AdvancedImageView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_thumbnail_news"
+        appsdk:aspectRatio="5.0"
+        appsdk:imageDefault="@drawable/default_thumbnail_news"
+        appsdk:imageError="@drawable/default_thumbnail_news"
+        appsdk:imageLoading="@drawable/default_thumbnail_news" />
+
+    <RelativeLayout
+        android:id="@+id/summary_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip" >
+
+        <ImageView
+            android:id="@+id/summary_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@null"
+            android:paddingTop="3dip"
+            android:src="@drawable/summary_icon" />
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/summary_icon"
+            android:layout_toRightOf="@id/summary_icon"
+            android:gravity="left"
+            android:paddingLeft="5dip"
+            android:textAppearance="@style/MyTopicDetailSummaryTextStyle" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/section_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/topic_summary_background"
+        android:gravity="left"
+        android:padding="5dip"
+        android:singleLine="true"
+        android:textAppearance="@style/MyTopicDetailSectionTextStyle" />
+
+    <LinearLayout
+        android:id="@+id/normal_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/normal_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:padding="5dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/type_video_icon" />
+
+                <TextView
+                    android:id="@+id/normal_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/normal_type"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textAppearance="@style/MyHomeListTitleTextStyle" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dip"
+                android:gravity="top"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/normal_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lineSpacingMultiplier="1.2"
+                        android:lines="3"
+                        android:maxLines="3"
+                        android:textAppearance="@style/MyHomeListSummaryTextStyle" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/normal_summary"
+                        android:layout_gravity="center_vertical" >
+
+                        <ImageView
+                            android:id="@+id/normal_commenticon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@null"
+                            android:src="@drawable/commentcount_icon" />
+
+                        <TextView
+                            android:id="@+id/normal_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/normal_commenticon"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:paddingLeft="5dip"
+                            android:textAppearance="@style/MyHomeListTipsTextStyle"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="10dip"
+                    android:layout_height="wrap_content"
+                    android:background="@null" />
+
+                <com.appsdk.advancedimageview.AdvancedImageView
+                    android:id="@+id/normal_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_thumbnail_news"
+                    appsdk:aspectRatio="1.5"
+                    appsdk:imageDefault="@drawable/default_thumbnail_news"
+                    appsdk:imageError="@drawable/default_thumbnail_news"
+                    appsdk:imageLoading="@drawable/default_thumbnail_news"
+                    appsdk:roundRadius="3" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="5dip"
+            android:background="@color/topic_summary_background" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" >
+
+                <com.appsdk.advancedimageview.AdvancedImageView
+                    android:id="@+id/video_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_thumbnail_video"
+                    appsdk:aspectRatio="1.78"
+                    appsdk:imageDefault="@drawable/default_thumbnail_video"
+                    appsdk:imageError="@drawable/default_thumbnail_video"
+                    appsdk:imageLoading="@drawable/default_thumbnail_video"
+                    appsdk:roundRadius="3" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true" >
+
+                    <com.appsdk.advancedimageview.AdvancedImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/videonews_list_play_icon"
+                        appsdk:fitWidth="true"
+                        appsdk:roundRadius="3" />
+
+                    <TextView
+                        android:id="@+id/video_duration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dip"
+                        android:paddingTop="3dip"
+                        android:textAppearance="@style/MyVideoListDurationTextStyle" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="5dip"
+                android:layout_height="wrap_content"
+                android:background="@null" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2" >
+
+                <TextView
+                    android:id="@+id/video_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lineSpacingMultiplier="1.2"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:textAppearance="@style/MyVideoListTitleTextStyle" />
+
+                <ImageView
+                    android:id="@+id/video_commenticon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/video_title"
+                    android:contentDescription="@null"
+                    android:paddingBottom="3dip"
+                    android:paddingTop="3dip"
+                    android:src="@drawable/commentcount_icon" />
+
+                <TextView
+                    android:id="@+id/video_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/video_commenticon"
+                    android:layout_alignTop="@id/video_commenticon"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/video_commenticon"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:textColor="@color/headline_summary"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/video_playcounticon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/video_comment"
+                    android:layout_alignTop="@id/video_comment"
+                    android:layout_marginLeft="15dip"
+                    android:layout_toRightOf="@id/video_comment"
+                    android:contentDescription="@null"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/playcount_icon" />
+
+                <TextView
+                    android:id="@+id/video_playcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/video_playcounticon"
+                    android:layout_alignTop="@id/video_playcounticon"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/video_playcounticon"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:textColor="@color/headline_summary"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="5dip"
+            android:background="@color/topic_summary_background" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/picture_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/picture_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:lineSpacingMultiplier="1.2"
+                    android:paddingRight="40dip"
+                    android:singleLine="true"
+                    android:textAppearance="@style/MyPhotoListTitleTextStyle" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/type_picture_icon" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.appsdk.advancedimageview.AdvancedImageView
+                    android:id="@+id/picture_logo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dip"
+                    android:layout_weight="1"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_thumbnail_news"
+                    appsdk:aspectRatio="1.5"
+                    appsdk:imageDefault="@drawable/default_thumbnail_news"
+                    appsdk:imageError="@drawable/default_thumbnail_news"
+                    appsdk:imageLoading="@drawable/default_thumbnail_news"
+                    appsdk:roundRadius="3" />
+
+                <com.appsdk.advancedimageview.AdvancedImageView
+                    android:id="@+id/picture_logo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dip"
+                    android:layout_weight="1"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_thumbnail_news"
+                    appsdk:aspectRatio="1.5"
+                    appsdk:imageDefault="@drawable/default_thumbnail_news"
+                    appsdk:imageError="@drawable/default_thumbnail_news"
+                    appsdk:imageLoading="@drawable/default_thumbnail_news"
+                    appsdk:roundRadius="3" />
+
+                <com.appsdk.advancedimageview.AdvancedImageView
+                    android:id="@+id/picture_logo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dip"
+                    android:layout_weight="1"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_thumbnail_news"
+                    appsdk:aspectRatio="1.5"
+                    appsdk:imageDefault="@drawable/default_thumbnail_news"
+                    appsdk:imageError="@drawable/default_thumbnail_news"
+                    appsdk:imageLoading="@drawable/default_thumbnail_news"
+                    appsdk:roundRadius="3" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/picture_commenticon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:contentDescription="@null"
+                    android:paddingBottom="3dip"
+                    android:paddingTop="5dip"
+                    android:src="@drawable/commentcount_icon" />
+
+                <TextView
+                    android:id="@+id/picture_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/picture_commenticon"
+                    android:layout_alignTop="@id/picture_commenticon"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/picture_commenticon"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textAppearance="@style/MyHomeListTipsTextStyle" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="5dip"
+            android:background="@color/topic_summary_background" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vote_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:background="@drawable/greybox_shape_corner"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <com.appsdk.advancedimageview.AdvancedImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/vote_icon"
+            appsdk:aspectRatio="1.2"
+            appsdk:fadeInDuration="0.3"
+            appsdk:imageDefault="@drawable/vote_icon"
+            appsdk:imageError="@drawable/vote_icon"
+            appsdk:imageLoading="@drawable/vote_icon"
+            appsdk:roundRadius="3" />
+
+        <View
+            android:layout_width="5dip"
+            android:layout_height="wrap_content"
+            android:background="@null" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/vote_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:lines="2"
+                android:maxLines="2"
+                android:textAppearance="@style/MyVideoListTitleTextStyle"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/voters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/mNewsdetailVoteTitle"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:textColor="@color/headline_summary"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

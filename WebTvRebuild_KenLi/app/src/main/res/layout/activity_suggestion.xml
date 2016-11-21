@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/suggestion_background_color" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/suggestion_titlebar_background"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/mSuggestionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:padding="10dip"
+            android:text="@string/suggestion_title"
+            android:textAppearance="@style/MySuggestionTitleTextStyle" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:layout_alignParentBottom="true" >
+
+        <ImageButton
+            android:id="@+id/mSuggestionBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_back_icon" />
+
+        <ImageButton
+            android:id="@+id/mSuggestionSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/suggestion_submit_background" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/divider_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_above="@id/footer_layout"
+        android:background="@color/suggestion_divider_color"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/divider_layout"
+        android:layout_below="@id/header_layout" >
+
+        <EditText
+            android:id="@+id/mSuggestionContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:gravity="top"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine"
+            android:padding="10dip"
+            android:textAppearance="@style/MySuggestionContentTextStyle"
+            android:textColor="#5f5f5f" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageView
+            android:id="@+id/mSuggestionLoadingImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:padding="30dip"
+            android:src="@drawable/suggestion_backimage" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

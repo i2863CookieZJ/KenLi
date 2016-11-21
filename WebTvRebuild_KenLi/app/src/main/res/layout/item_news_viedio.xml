@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/iconContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/image"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail_video"
+            appsdk:aspectRatio="1.78"
+            appsdk:fadeInDuration="0.3"
+            appsdk:imageDefault="@drawable/default_thumbnail_video"
+            appsdk:imageError="@drawable/default_thumbnail_video"
+            appsdk:imageLoading="@drawable/default_thumbnail_video"
+            appsdk:roundRadius="3" />
+
+        <TextView
+            android:id="@+id/bf_time"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/new_viedo_beijing"
+            android:gravity="right|center_vertical"
+            android:padding="3dp"
+            android:text="11"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iconContainer"
+        android:layout_toRightOf="@id/iconContainer"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="44tt4"
+        android:textColor="#010101"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/title"
+        android:layout_below="@id/title"
+        android:layout_toRightOf="@id/iconContainer"
+        android:ellipsize="end"
+        android:lineSpacingExtra="4sp"
+        android:maxLines="2"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:text="333433"
+        android:textColor="#A8A8A8"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/summary"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true" >
+        <TextView
+            android:id="@+id/bf_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="4dp"
+            android:drawableLeft="@drawable/new_viedo_tb"
+            android:text=""
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/pl_count"
+            android:visibility="gone"
+            android:drawablePadding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/new_comments"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

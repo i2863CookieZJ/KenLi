@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dip"
+    android:paddingTop="5dip"
+    android:paddingRight="10dip"
+    android:paddingBottom="5dip"
+    android:background="#aa000000"
+    android:orientation="horizontal" >
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dip"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        android:text="@string/json_info"/>
+    <ProgressBar 
+		android:id="@+id/firstBar"
+		android:layout_width="18dip"
+		android:layout_height="18dip"
+		android:layout_marginRight="5dip"
+        android:layout_gravity="center_vertical"
+		android:visibility="visible"    
+		style="@android:style/Widget.ProgressBar.Inverse"/>
+    <View 
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        android:background="#ffaaaaaa"/>
+    <ImageButton 
+        android:id="@+id/broken"
+        android:layout_width="16dip"
+        android:layout_height="16dip"
+        android:layout_marginLeft="5dip"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop"
+        android:background="@null"
+        android:src="@drawable/broken"
+        android:contentDescription="@null"/>
+</LinearLayout>

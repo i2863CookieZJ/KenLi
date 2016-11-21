@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageViewFromMediaChooserBucketRowView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/imageViewFromMediaChooserBucketRowView"
+            android:layout_alignLeft="@id/imageViewFromMediaChooserBucketRowView"
+            android:layout_alignRight="@id/imageViewFromMediaChooserBucketRowView"
+            android:layout_alignTop="@id/imageViewFromMediaChooserBucketRowView"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_mask" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nameTextViewFromMediaChooserBucketRowView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#88666666"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/video"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+</FrameLayout>

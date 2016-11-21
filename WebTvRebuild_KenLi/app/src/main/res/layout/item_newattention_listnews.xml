@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_home_list" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp" >
+
+        <RelativeLayout
+            android:id="@+id/newsImageContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp" >
+
+            <com.appsdk.advancedimageview.AdvancedImageView
+                android:id="@+id/normalNewsIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_thumbnail_video"
+                android:visibility="gone"
+                appsdk:fadeInDuration="0.3"
+                appsdk:imageDefault="@drawable/default_thumbnail_video"
+                appsdk:imageError="@drawable/default_thumbnail_video"
+                appsdk:imageLoading="@drawable/default_thumbnail_video"
+                appsdk:roundRadius="1" />
+
+            <RelativeLayout
+                android:id="@+id/videoNewsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:visibility="gone" >
+
+                <com.appsdk.advancedimageview.AdvancedImageView
+                    android:id="@+id/videoNewsIcon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/default_thumbnail_banner"
+                    appsdk:fadeInDuration="0.3"
+                    appsdk:imageDefault="@drawable/default_thumbnail_banner"
+                    appsdk:imageError="@drawable/default_thumbnail_banner"
+                    appsdk:imageLoading="@drawable/default_thumbnail_banner"
+                    appsdk:roundRadius="1" />
+
+                <ImageView
+                    android:id="@+id/videoNewsPlayIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/new_attention_videnews_centericon"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/videoNewsTimeLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/videoNewsIcon"
+                    android:background="@drawable/new_attention_videotimelabel_bg"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="20dp"
+                    android:text="00:30:30"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 这里面是普通新闻  图片新闻  视频新闻列表用的 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:minHeight="96dp"
+            android:orientation="vertical"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/newsContentTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/newattention_itemtitle_marginleft"
+                    android:layout_marginRight="@dimen/newattention_itemtitle_marginleft"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/newsSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/newattention_itemtitle_marginleft"
+                    android:layout_marginRight="@dimen/newattention_itemtitle_marginleft"
+                    android:layout_marginTop="1dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:textColor="#838383"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/newattention_itemtitle_marginleft"
+                android:layout_marginRight="@dimen/newattention_itemtitle_marginleft"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/newsBelongTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="惠州电台"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/newattention_newsttitle_textsize" />
+
+                <TextView
+                    android:id="@+id/newsPublishDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="00-00		00:00"
+                    android:textColor="#838383"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/divider_full"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

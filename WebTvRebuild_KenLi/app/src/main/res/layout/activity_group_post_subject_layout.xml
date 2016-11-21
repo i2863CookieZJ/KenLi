@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/title_layout_for_group_post_subject" />
+
+    <EditText
+        android:id="@+id/post_subject_title_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:background="@null"
+        android:hint="@string/subject_title"
+        android:maxLength="40"
+        android:padding="15.0dip"
+        android:singleLine="true"
+        android:textColor="@color/grey_group_for_des"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@+id/post_subject_title_edit"
+        android:background="@color/grey_group_for_des" />
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip" >
+
+                <Button
+                    android:id="@+id/post_subject_pictures_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10.0dip"
+                    android:background="@drawable/selector_btn_post_subject_picture"
+                    android:button="@null" />
+
+                <LinearLayout
+                    android:id="@+id/post_subject_pictures_num_layout"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_gravity="right"
+                    android:background="@drawable/point_red"
+                    android:gravity="center"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/post_subject_pictures_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textColor="@color/white"
+                        android:textSize="10.0sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/post_subject_faces_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/selector_btn_post_subject_faces"
+                android:button="@null" />
+
+            <Button
+                android:id="@+id/post_subject_link_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:background="@drawable/selector_btn_post_subject_link"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/post_subject_bottom_content_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="250.0dip"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@color/grey_group_for_des" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/post_subject_bottom_pic_layout"
+                    layout="@layout/post_pic_layout" />
+
+                <include
+                    android:id="@+id/post_subject_bottom_faces_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="20.0dip"
+                    layout="@layout/post_face_layout" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.sobey.cloud.webtv.widgets.SmiliesEditText
+        android:id="@+id/post_subject_content_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/post_subject_title_edit"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="@string/subject_content"
+        android:maxLength="1000"
+        android:padding="15.0dip"
+        android:textColor="@color/grey_group_for_des"
+        android:textSize="16.0sp" />
+
+    <include
+        android:id="@+id/mLoadinglayout"
+        layout="@layout/uploading_dialog"
+        android:visibility="gone" />
+
+</RelativeLayout>

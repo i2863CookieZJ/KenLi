@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+
+    <!-- 自定义TitleView -->
+    <declare-styleable name="custom_title">
+        <attr name="c_title" format="string"></attr>
+        <attr name="operation_background" format="reference"></attr>
+        <attr name="style">
+            <enum name="back" value="1" />
+            <enum name="main" value="2" />
+            <enum name="operator" value="3" />
+            <enum name="single" value="4" />
+            <enum name="operator_only" value="5" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="mycustom">
+        <attr name="resid" format="integer" />
+        <attr name="txt" format="string" />
+    </declare-styleable>
+
+</resources>

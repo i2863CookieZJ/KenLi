@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <TextView
+        android:id="@+id/item_talking_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="09:50"
+        android:textColor="#000" />
+
+    <LinearLayout
+        android:id="@+id/item_talking_fromlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.sobey.cloud.webtv.ui.RoundImageView
+                android:id="@+id/item_talking_hisicon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/default_head" />
+
+            <TextView
+                android:id="@+id/item_talking_hesay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/item_talking_hisicon"
+                android:background="@drawable/hesay_bg_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="8dp"
+                android:text="dfsssdfsdffssssssssssssssssssssssssssgg"
+                android:textColor="#838383"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_talking_delhismsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="x"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_talking_tolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/item_talking_delmymsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="x"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.sobey.cloud.webtv.ui.RoundImageView
+                android:id="@+id/item_talking_iicon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/default_head" />
+
+            <TextView
+                android:id="@+id/item_talking_isay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/item_talking_iicon"
+                android:background="@drawable/isay_bg_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="12dp"
+                android:text="我看见了空间克隆建立开放的精神疗法"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

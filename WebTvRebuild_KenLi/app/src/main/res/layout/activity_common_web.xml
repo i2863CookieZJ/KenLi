@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_common_web_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/header_ic"
+        layout="@layout/layout_common_web_header" />
+
+    <org.apache.cordova.engine.SystemWebView
+        android:id="@+id/common_wv"
+        android:layout_width="fill_parent"
+        android:layerType="hardware"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_rl"
+        android:layout_below="@+id/header_ic" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/comment_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/send_btn"
+            android:background="@drawable/live_edit_bg"
+            android:gravity="center_vertical"
+            android:hint="写评论..."
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:textColor="@color/common_gray_text_color"
+            android:textColorHint="@color/common_light_gray_text_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/send_btn"
+            android:layout_width="45dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/redbutton"
+            android:clickable="true"
+            android:gravity="center"
+            android:inputType="none"
+            android:onClick="onClick"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="14.0sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        android:id="@+id/header_ctv"
+        custom:style="back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_ctv"
+        android:background="@null"
+        android:orientation="vertical" >
+
+        <com.dylan.uiparts.listview.DragListView
+            android:id="@+id/mNewsList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/new_livechannel_list_bgcolor"
+            android:divider="@drawable/divider_middle"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/mAdLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:visibility="gone" >
+
+            <com.appsdk.advancedimageview.AdvancedImageCarousel
+                android:id="@+id/mAdImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:contentDescription="@null"
+                appsdk:aspectRatio="5.0"
+                appsdk:imageDefault="@drawable/trans"
+                appsdk:imageError="@drawable/trans"
+                appsdk:imageLoading="@drawable/trans" />
+
+            <ImageButton
+                android:id="@+id/mAdCloseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:contentDescription="@null"
+                android:padding="8dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/ad_close_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loadingMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_ctv"
+        layout="@layout/layout_loading_mask"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/loadingfail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_ctv"
+        layout="@layout/layout_loading_failed"
+        android:visibility="gone" />
+
+</RelativeLayout>

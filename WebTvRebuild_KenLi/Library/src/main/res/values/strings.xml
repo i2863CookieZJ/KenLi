@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MediaChooser</string>
+    <string name="image">图片</string>
+    <string name="video">视频</string>
+    <string name="all">图片和视频</string>
+    <string name="images_tab">图片</string>
+    <string name="videos_tab">视频</string>
+    <string name="footerbar_ok">确定</string>
+    <string name="footerbar_cancel">返回</string>
+    <string name="max_limit_reach_error"> Max limit 10 file. </string>
+    <string name="max_limit_file">已达到最大选取数目</string>
+    <string name="please_wait_text"> Please wait</string>
+    <string name="refreshing"> Refreshing</string>
+    <string name="file_size_exeeded"> The file size exceeds the maximum limit of </string>
+    <string name="selected_file_size">  Selected media size is : </string>
+    <string name="mb"> MB</string>
+    <string name="plaese_select_file"> Please select a file.</string>
+    <string name="no_media_file_available"> No media file available.</string>
+    
+    
+    <string name="draglistview_header_hint_normal">下拉刷新</string>
+    <string name="draglistview_header_hint_ready">松开刷新数据</string>
+    <string name="draglistview_header_hint_loading">正在刷新&#8230;</string>
+    <string name="draglistview_header_last_time">上次刷新时间：</string>
+    <string name="draglistview_footer_hint_normal">查看更多</string>
+    <string name="draglistview_footer_hint_ready">松开载入更多</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">刷新\u2026</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+
+    <!-- videoplayer -->
+    <string name="time_zero">00:00:00</string>
+    
+	<string name="loading">正在加载...</string>
+
+    <!-- error notice -->
+    <string name="error_notice">视频无法播放</string>
+
+</resources>

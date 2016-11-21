@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/livenews_list_background"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titlebartop"
+        layout="@layout/layout_titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/headerDateGroup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/new_audiolive_bgcolor"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/headerDateGroup"
+            android:layout_marginBottom="45dp"
+            android:background="@color/livenews_list_background" >
+
+            <include
+                android:id="@+id/programListLoadTips"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                layout="@layout/loading_mask"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/noProgramListTipsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/no_program_list_img"
+                tools:ignore="ContentDescription" />
+
+            <ListView
+                android:id="@+id/audio_programlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/new_livechannel_list_bgcolor"
+                android:divider="@null"
+                android:dividerHeight="5dp" >
+            </ListView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/radio_play_control"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/header_background" >
+
+            <ImageView
+                android:id="@+id/radio_play_status_button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/bottom_radio_pause_btn"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/radio_status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/radio_play_status_button"
+                android:text="已经停止" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

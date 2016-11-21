@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        android:id="@+id/header_ctv"
+        custom:style="operator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/myCart"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/submit_btn"
+        android:layout_below="@+id/header_ctv"
+        android:background="#fff6f6f6"
+        android:divider="@null"
+        android:dividerHeight="4.0dip"
+        android:headerDividersEnabled="false" />
+
+    <LinearLayout
+        android:id="@+id/all_select_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="45.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15.0dip"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/all_shop_cart_cb"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/checkbox_style"
+            android:button="@null"
+            android:clickable="false"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/all_shop_cart_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:text="全选"
+            android:textColor="@color/common_dark_gray_text_color"
+            android:textSize="14.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="45.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="20.0dip"
+        android:layout_toLeftOf="@+id/submit_btn"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计："
+            android:textColor="@color/common_dark_gray_text_color"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@+id/all_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥0.00"
+            android:textColor="@color/common_red_color"
+            android:textSize="14.0sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/submit_btn"
+        android:layout_width="120.0dip"
+        android:layout_height="45.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/common_red_color"
+        android:clickable="true"
+        android:gravity="center"
+        android:inputType="none"
+        android:text="结算"
+        android:textColor="@color/white"
+        android:textSize="16.0sp" />
+
+    <include
+        android:id="@+id/empty_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_ctv"
+        layout="@layout/layout_nocontent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/nocontent_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_ctv"
+        layout="@layout/layout_nocontent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/loadingmask"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/header_ctv"
+        layout="@layout/layout_loading_mask" />
+
+</RelativeLayout>

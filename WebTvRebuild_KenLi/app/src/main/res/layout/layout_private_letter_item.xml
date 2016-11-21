@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff"
+            android:padding="8.0dip" >
+
+            <com.sobey.cloud.webtv.ui.RoundImageView
+                android:id="@+id/item_msgcommon_headicon"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_centerVertical="true" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="8.0dip"
+                android:layout_toRightOf="@+id/item_msgcommon_headicon"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8.0dip"
+                    android:gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/item_msgcommon_who"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:singleLine="true"
+                        android:text="Who"
+                        android:textColor="@color/common_dark_gray_text_color"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/item_msgcommon_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2015-12-17"
+                        android:textColor="@color/common_light_gray_text_color"
+                        android:textSize="12.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/item_msgcommon_content"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:singleLine="true"
+                        android:text="我考虑将来是否看见了房间都是垃圾"
+                        android:textColor="@color/common_light_gray_text_color"
+                        android:textSize="13.0sp" />
+
+                    <TextView
+                        android:id="@+id/item_msgcommon_msgcount"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:background="@drawable/red_msgnum_point2"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#fffff000"
+                        android:textSize="12.0sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="76.0dip"
+            android:background="@drawable/shadow_line" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_msgcommon_delitem"
+        android:layout_width="70.0dip"
+        android:layout_height="fill_parent"
+        android:background="#ffff0000"
+        android:gravity="center"
+        android:text="删除" />
+
+</LinearLayout>

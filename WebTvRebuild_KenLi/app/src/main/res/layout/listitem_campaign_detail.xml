@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/player_item_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="108.0dip"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/image"
+            android:layout_width="109.0dip"
+            android:layout_height="78.0dip"
+            android:layout_marginBottom="15.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail_news"
+            appsdk:imageDefault="@drawable/default_thumbnail_news"
+            appsdk:imageError="@drawable/default_thumbnail_news"
+            appsdk:imageLoading="@drawable/default_thumbnail_news" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="78.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_toRightOf="@+id/image" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="林丹"
+                android:textColor="@color/common_dark_gray_text_color"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/summary"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/upicon"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:src="@drawable/toupiao_dz" />
+
+                <TextView
+                    android:id="@+id/upnum_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:text="234"
+                    android:textColor="@color/common_light_gray_text_color"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/vote_textview"
+                android:layout_width="60.0dip"
+                android:layout_height="25.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_toupiao_choosed"
+                android:gravity="center"
+                android:text="投票"
+                android:textColor="@color/white"
+                android:textSize="16.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/bottom_line_view"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/grey" />
+
+</LinearLayout>

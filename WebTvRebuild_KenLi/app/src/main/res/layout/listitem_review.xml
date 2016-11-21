@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/image"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_thumbnail_userlogo"
+            appsdk:fitWidth="true"
+            appsdk:imageDefault="@drawable/default_thumbnail_userlogo"
+            appsdk:imageLoading="@drawable/default_thumbnail_userlogo"
+            appsdk:imageError="@drawable/default_thumbnail_userlogo"
+            appsdk:roundRadius="2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:paddingLeft="5dip"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/user"
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:gravity="top"
+                android:textColor="@color/comment_info_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingTop="5dip"
+                android:gravity="bottom"
+                android:textColor="@color/comment_info_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dip"
+        android:textColor="@color/comment_content_color"
+        android:textSize="20sp" />
+
+</LinearLayout>

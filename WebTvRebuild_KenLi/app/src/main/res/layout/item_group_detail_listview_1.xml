@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10.0dip" >
+
+        <com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/item_group_detail_listview_1_iv"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_thumbnail_banner"
+            appsdk:aspectRatio="1.0"
+            appsdk:fadeInDuration="0.3"
+            appsdk:imageDefault="@drawable/default_thumbnail_banner"
+            appsdk:imageError="@drawable/default_thumbnail_banner"
+            appsdk:imageLoading="@drawable/default_thumbnail_banner"
+            appsdk:roundRadius="10" />
+
+        <RelativeLayout
+            android:id="@+id/item_group_detail_listview_1_top_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/item_group_detail_listview_1_iv"
+            android:paddingLeft="5.0dip" >
+
+            <TextView
+                android:id="@+id/item_group_detail_listview_1_group_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:text="李毅吧"
+                android:textColor="@color/common_dark_gray_text_color"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/item_group_detail_listview_1_follow_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/btn_follow_pressed_blue"
+                android:paddingBottom="4.0dip"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip"
+                android:paddingTop="4.0dip"
+                android:text="关注"
+                android:textColor="@color/common_red_color"
+                android:textSize="16.0sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_group_detail_listview_1_group_des_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_group_detail_listview_1_top_layout"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_toRightOf="@+id/item_group_detail_listview_1_iv"
+            android:text="以车为友，游走天地之间以车为友，游走天地之间以车为友，游走天地之间以"
+            android:textColor="@color/common_light_gray_text_color_2"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@+id/item_group_detail_listview_1_group_fatienum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_group_detail_listview_1_group_des_tv"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="3.0dip"
+            android:layout_toRightOf="@+id/item_group_detail_listview_1_iv"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="发帖:0"
+            android:textColor="@color/common_light_gray_text_color_2"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/item_group_detail_top_subject_list_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="8.0dip"
+        android:background="@color/grey_group_bg" />
+
+</LinearLayout>

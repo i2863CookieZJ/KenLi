@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dip"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/broke_footer_background"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/broke_footerbar_news_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/broke_footerbar_news_image"
+            android:layout_width="match_parent"
+            android:layout_height="27dip"
+            android:contentDescription="@null"
+            android:paddingTop="5dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/broke_footer_star_icon_normal" />
+
+        <TextView
+            android:id="@+id/broke_footerbar_news_text"
+            android:layout_width="match_parent"
+            android:layout_height="23dip"
+            android:gravity="center"
+            android:text="@string/broke_footerbar_news_text"
+            android:textColor="@color/broke_footer_text_normal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/broke_footerbar_my_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/broke_footerbar_my_image"
+            android:layout_width="match_parent"
+            android:layout_height="27dip"
+            android:contentDescription="@null"
+            android:paddingTop="5dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/broke_footer_my_icon_normal" />
+
+        <TextView
+            android:id="@+id/broke_footerbar_my_text"
+            android:layout_width="match_parent"
+            android:layout_height="23dip"
+            android:gravity="center"
+            android:text="@string/broke_footerbar_my_text"
+            android:textColor="@color/broke_footer_text_normal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/broke_footerbar_camera_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/broke_footer_camera_icon" />
+
+    <LinearLayout
+        android:id="@+id/broke_footerbar_task_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/broke_footerbar_task_image"
+            android:layout_width="match_parent"
+            android:layout_height="27dip"
+            android:contentDescription="@null"
+            android:paddingTop="5dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/broke_footer_task_icon_normal" />
+
+        <TextView
+            android:id="@+id/broke_footerbar_task_text"
+            android:layout_width="match_parent"
+            android:layout_height="23dip"
+            android:gravity="center"
+            android:text="@string/broke_footerbar_task_text"
+            android:textColor="@color/broke_footer_text_normal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/broke_footerbar_play_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/broke_footerbar_play_image"
+            android:layout_width="match_parent"
+            android:layout_height="27dip"
+            android:contentDescription="@null"
+            android:paddingTop="5dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/broke_footer_play_icon_normal" />
+
+        <TextView
+            android:id="@+id/broke_footerbar_play_text"
+            android:layout_width="match_parent"
+            android:layout_height="23dip"
+            android:gravity="center"
+            android:text="@string/broke_footerbar_play_text"
+            android:textColor="@color/broke_footer_text_normal"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

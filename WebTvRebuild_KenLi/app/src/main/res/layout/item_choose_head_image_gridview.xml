@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <com.appsdk.advancedimageview.AdvancedImageView
+            android:id="@+id/item_choose_photo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_third_load_bg"
+            appsdk:fadeInDuration="0.3"
+            appsdk:imageDefault="@drawable/default_third_load_bg"
+            appsdk:imageError="@drawable/ptoto_load_failed"
+            appsdk:imageLoading="@drawable/default_third_load_bg" />
+
+        <LinearLayout
+            android:id="@+id/item_choose_photo_choosed_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white_trans"
+            android:orientation="vertical" />
+
+        <CheckBox
+            android:id="@+id/item_choose_photo_choose_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_cb_group_choose_photo"
+            android:button="@null"
+            android:clickable="false"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/item_choose_photo_take_photo_layout"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/black_gray"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingRight="20dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_camera_pic" />
+
+            <TextView
+                android:id="@+id/item_choose_photo_take_photo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="拍摄照片"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

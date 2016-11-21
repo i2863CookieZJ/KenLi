@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".SearchActivity" >
+
+    <LinearLayout
+        android:id="@+id/search_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:background="@drawable/search_titlebar"
+        android:orientation="horizontal" >
+
+        <com.dylan.uiparts.edittext.SearchBox
+            android:id="@+id/mSearchBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingBottom="0dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="0dip" />
+
+        <Button
+            android:id="@+id/search_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:layout_weight="5"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/search_cancel"
+            android:textColor="@color/red"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <com.dylan.uiparts.keywordflow.KeywordsFlow
+        android:id="@+id/keywordsflow_framework"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dip"
+        android:padding="10dip" >
+    </com.dylan.uiparts.keywordflow.KeywordsFlow>
+
+    <ListView
+        android:id="@+id/search_resultlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dip"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/search_selecttype"
+        android:layout_width="140dip"
+        android:layout_height="89dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="50dip"
+        android:padding="0dip"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:src="@drawable/search_selecttype_icon"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_group_bg"
+        android:orientation="vertical" >
+
+         <com.sobey.cloud.webtv.widgets.CustomTitleView
+             android:id="@+id/header_ctv"
+             custom:style="back"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/webPageLoadProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginLeft="-2dp"
+            android:layout_marginRight="-2dp"
+            android:max="100" />
+
+        <WebView
+            android:id="@+id/activity_my_address_web"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</ScrollView>

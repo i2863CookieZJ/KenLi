@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitem_background"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dip" >
+
+            <com.appsdk.advancedimageview.AdvancedImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_thumbnail_banner"
+                appsdk:aspectRatio="1.5"
+                appsdk:imageDefault="@drawable/default_thumbnail_banner"
+                appsdk:imageLoading="@drawable/default_thumbnail_banner"
+                appsdk:imageError="@drawable/default_thumbnail_banner"
+                appsdk:roundRadius="3"
+                appsdk:fadeInDuration = "0.3" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/greybox_broke_news_list_picture"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:id="@+id/videocount_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/broke_news_list_camera_icon" />
+
+                <TextView
+                    android:id="@+id/videocount_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:textAppearance="@style/MyBrokeNewsListWhiteTextStyle" />
+
+                <ImageView
+                    android:id="@+id/picturecount_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:paddingLeft="10dip"
+                    android:src="@drawable/broke_news_list_picture_icon" />
+
+                <TextView
+                    android:id="@+id/picturecount_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:textAppearance="@style/MyBrokeNewsListWhiteTextStyle" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true" >
+
+            <com.appsdk.advancedimageview.AdvancedImageView
+                android:id="@+id/headicon_image"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_thumbnail_userlogo"
+                appsdk:aspectRatio="1.0"
+                appsdk:imageDefault="@drawable/default_thumbnail_userlogo"
+                appsdk:imageLoading="@drawable/default_thumbnail_userlogo"
+                appsdk:imageError="@drawable/default_thumbnail_userlogo"
+                appsdk:roundRadius="3"
+                appsdk:fadeInDuration = "0.3" />
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="5dip"
+                android:textAppearance="@style/MyHomeListTipsTextStyle" />
+
+            <ImageView
+                android:id="@+id/timeicon_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/time_text"
+                android:layout_alignTop="@id/time_text"
+                android:layout_toLeftOf="@id/time_text"
+                android:contentDescription="@null"
+                android:src="@drawable/time_icon" />
+
+            <TextView
+                android:id="@+id/comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/timeicon_image"
+                android:layout_alignTop="@id/timeicon_image"
+                android:layout_toLeftOf="@id/timeicon_image"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="5dip"
+                android:textAppearance="@style/MyHomeListTipsTextStyle" />
+
+            <ImageView
+                android:id="@+id/commentcount_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/comment_text"
+                android:layout_alignTop="@id/comment_text"
+                android:layout_toLeftOf="@id/comment_text"
+                android:contentDescription="@null"
+                android:src="@drawable/commentcount_icon" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/commentcount_image"
+                android:layout_alignTop="@id/commentcount_image"
+                android:layout_toLeftOf="@id/commentcount_image"
+                android:layout_toRightOf="@id/headicon_image"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="5dip"
+                android:textAppearance="@style/MyHomeListTipsTextStyle" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingTop="10dip"
+        android:textAppearance="@style/MyHomeListTitleTextStyle" />
+
+</LinearLayout>

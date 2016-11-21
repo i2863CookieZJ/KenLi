@@ -1,0 +1,41 @@
+<resources>
+
+    <dimen name="headline_padding_left">10dip</dimen>
+    <dimen name="headline_padding_right">10dip</dimen>
+    <dimen name="headline_padding_top">10dip</dimen>
+    <dimen name="headline_padding_bottom">10dip</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="top_radiobtn_bottm">35dp</dimen>
+    <dimen name="newattention_itemcontent_leftmargin">10dp</dimen>
+    <dimen name="newattention_itemcontent_topmargin">8dp</dimen>
+    <dimen name="newattention_content_belongtitle_leftmargin">10dp</dimen>
+    <dimen name="newattention_content_belongtitle_topmargin">5dp</dimen>
+    <dimen name="newattention_content_publishdate_leftmargin">8dp</dimen>
+    <dimen name="newattention_content_publishdate_topmargin">10dp</dimen>
+    <dimen name="newattention_itemtitle_marginleft">10dp</dimen>
+    <dimen name="newattention_newsttitle_textsize">15sp</dimen>
+    <dimen name="a0">5.0dp</dimen>
+    <dimen name="a">10.0dp</dimen>
+    <dimen name="b">15.0dp</dimen>
+    <dimen name="c">20.0dp</dimen>
+    <dimen name="d">25.0dp</dimen>
+    <dimen name="e">30.0dp</dimen>
+    <dimen name="f">35.0dp</dimen>
+    <dimen name="g">40.0dp</dimen>
+    <dimen name="h">45.0dp</dimen>
+    <dimen name="i">50.0dp</dimen>
+    <dimen name="j">55.0dp</dimen>
+    <dimen name="k">60.0dp</dimen>
+    <dimen name="l">65.0dp</dimen>
+    <dimen name="m">70.0dp</dimen>
+    <dimen name="n">75.0dp</dimen>
+    <dimen name="o">80.0dp</dimen>
+    <dimen name="p">85.0dp</dimen>
+    <dimen name="q">90.0dp</dimen>
+    <dimen name="r">95.0dp</dimen>
+    <dimen name="s">100.0dp</dimen>
+    <dimen name="t">150.0dp</dimen>
+    <dimen name="u">200.0dp</dimen>
+
+</resources>

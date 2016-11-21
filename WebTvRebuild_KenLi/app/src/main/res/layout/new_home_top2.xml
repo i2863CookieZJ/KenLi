@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/new_green"
+    android:orientation="horizontal" >
+	<RadioGroup
+            android:id="@+id/home_group"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/new_green"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/home_attention"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableBottom="@drawable/community_main_radiobutton_blue_selector"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="关注"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/home_activity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableBottom="@drawable/community_main_radiobutton_blue_selector"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="活动"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/home_message"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableBottom="@drawable/community_main_radiobutton_blue_selector"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="资讯"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RadioGroup>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="圈子"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/user_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/group_search_icon" />
+    <ImageView
+        android:id="@+id/user_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:padding="4dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:src="@drawable/new_upersonal_center" />
+
+</RelativeLayout>

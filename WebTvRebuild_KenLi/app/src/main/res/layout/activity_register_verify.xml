@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff6f6f6" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="手机号注册"
+            android:textColor="@color/common_dark_gray_text_color"
+            android:textSize="18.0sp" />
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8.0dip"
+                android:src="@drawable/white_back_icon" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/shadow_line_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@+id/header_layout"
+        android:background="@drawable/shadow_line" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/divider_layout"
+        android:layout_below="@+id/shadow_line_tv" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/mRegisterVerifyNotice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8.0dip"
+                android:textAppearance="@style/MyRegisterVerifyNoticeTextStyle" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginRight="8.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="验证码"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16.0sp" />
+
+                <EditText
+                    android:id="@+id/mRegisterVerifyNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/register_verify_hint"
+                    android:inputType="number"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="5.0dip"
+                    android:singleLine="true"
+                    android:textAppearance="@style/MyRegisterVerifyTipsTextStyle" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mRegisterVerifySubmitBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginBottom="15.0dip"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginRight="8.0dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/redbutton"
+                android:clickable="true"
+                android:gravity="center"
+                android:inputType="none"
+                android:text="@string/register_verify_submit"
+                android:textAppearance="@style/MyRedButtonTextStyle" />
+
+            <LinearLayout
+                android:id="@+id/mRegisterVerifyCountDownLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/mRegisterVerifyCountDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/MyRegisterVerifyTipsRedTextStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="后重新发送"
+                    android:textAppearance="@style/MyRegisterVerifyTipsTextStyle" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mRegisterVerifyResend"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8.0dip"
+                android:gravity="center"
+                android:text="重新发送"
+                android:textAppearance="@style/MyRegisterVerifyTipsBlueTextStyle" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@drawable/shadow_line" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

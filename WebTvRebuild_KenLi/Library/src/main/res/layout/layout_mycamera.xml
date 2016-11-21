@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <FrameLayout
+        android:id="@+id/mycamera_preview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/controler_background" >
+
+        <ImageView
+            android:id="@+id/mycamera_controler_flashlight_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dip"
+            android:contentDescription="@null"
+            android:src="@drawable/mycamera_controler_flashlight_icon" />
+
+        <TextView
+            android:id="@+id/mycamera_controler_flashlight_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/mycamera_controler_flashlight_image"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/MyCameraControlerWhiteTextStyle" />
+
+        <TextView
+            android:id="@+id/mycamera_controler_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textAppearance="@style/MyCameraControlerWhiteTextStyle" />
+
+        <ImageView
+            android:id="@+id/mycamera_controler_camera_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dip"
+            android:contentDescription="@null"
+            android:src="@drawable/mycamera_controler_camera_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mycamera_picture_controler_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/controler_background" >
+
+        <ImageButton
+            android:id="@+id/mycamera_picture_controler_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dip"
+            android:background="@drawable/button_mycamera_controler_cancel"
+            android:contentDescription="@null" />
+
+        <ImageButton
+            android:id="@+id/mycamera_picture_controler_capture_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dip"
+            android:background="@drawable/mycamera_controler_capture_icon_normal"
+            android:contentDescription="@null" />
+
+        <ImageButton
+            android:id="@+id/mycamera_picture_controler_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dip"
+            android:background="@drawable/button_mycamera_controler_ok"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mycamera_video_controler_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/controler_background" >
+
+        <ImageButton
+            android:id="@+id/mycamera_video_controler_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dip"
+            android:background="@drawable/button_mycamera_controler_cancel"
+            android:contentDescription="@null" />
+
+        <ImageButton
+            android:id="@+id/mycamera_video_controler_capture_btn"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dip"
+            android:background="@drawable/button_mycamera_controler_capture"
+            android:contentDescription="@null" />
+
+        <ImageButton
+            android:id="@+id/mycamera_video_controler_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dip"
+            android:background="@drawable/button_mycamera_controler_ok"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+</RelativeLayout>

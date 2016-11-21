@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/login_tab_unselect"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/mCollectionHeaderBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:visibility="invisible"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_back_icon" />
+
+        <LinearLayout
+            android:id="@+id/mCollectionHeaderSelectLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/mCollectionHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="10dip"
+                android:textColor="@color/home_tab_text_focus"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@null"
+                android:scaleType="center"
+                android:src="@drawable/broke_capture_header_more_icon" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/mListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_layout"
+        android:background="@color/transparent"
+        android:divider="@drawable/divider_middle"
+        android:listSelector="@color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/mLoadingIconLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_layout"
+        android:background="@color/loading_background_color" >
+
+        <TextView
+            android:id="@+id/loading_chinese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/loading_chinese"
+            android:textAppearance="@style/MyLoadingChineseTextStyle" />
+
+        <ProgressBar
+            android:id="@+id/loading_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/loading_chinese"
+            android:layout_centerHorizontal="true"
+            android:indeterminateDrawable="@drawable/loading_icon_drawable"
+            android:paddingBottom="5dip" />
+
+        <TextView
+            android:id="@+id/loading_english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loading_chinese"
+            android:layout_centerHorizontal="true"
+            android:text="@string/loading_english"
+            android:textAppearance="@style/MyLoadingEnglishTextStyle" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mSelectLayout"
+        android:layout_width="120dip"
+        android:layout_height="100dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dip"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/select_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/broke_capture_dropbox_top" />
+
+        <ImageView
+            android:id="@+id/select_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/broke_capture_dropbox_bottom" />
+
+        <ScrollView
+            android:id="@+id/select_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/select_bottom"
+            android:layout_below="@id/select_top"
+            android:background="@drawable/broke_capture_dropbox_middle"
+            android:clickable="true"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/mSelectListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}"
+    android:background="@color/white" >
+    <include layout="@layout/title_layout_for_my_message"
+        android:id="@+id/top"/>
+	<!-- <com.dylan.uiparts.listview.DragListView
+        android:id="@+id/my_message_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top"
+        android:background="@color/white"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:divider="@color/grey_group_for_des"
+        android:dividerHeight="1px"
+        android:paddingBottom="10dp"
+        android:transcriptMode="alwaysScroll"
+        android:listSelector="@android:color/transparent" /> -->
+	<com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/my_message_listView"
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/grey_group_for_des"
+        android:dividerHeight="1px"
+        android:paddingBottom="10dp"
+        android:transcriptMode="alwaysScroll"
+        android:listSelector="@android:color/transparent"
+        />
+</RelativeLayout>

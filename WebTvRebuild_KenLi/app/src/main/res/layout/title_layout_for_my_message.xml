@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/new_green"
+    android:orientation="horizontal" >
+
+    <RadioGroup
+        android:id="@+id/home_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/new_green"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:visibility="invisible" >
+
+        <RadioButton
+            android:id="@+id/home_attention"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableBottom="@drawable/community_main_radiobutton_blue_selector"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="关注"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/home_activity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/community_main_radiobutton_blue_selector"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="活动"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/home_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/community_main_radiobutton_blue_selector"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="资讯"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@+id/title_left" >
+
+        <RelativeLayout
+            android:id="@+id/my_message_notice_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/my_message_notice_checked_bg"
+            android:orientation="horizontal"
+             >
+
+            <TextView
+                android:id="@+id/my_message_notice_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textSize="16sp"
+                android:text="@string/notice"
+                android:textColor="@color/new_green" />
+            <ImageView 
+                android:id="@+id/my_message_notice_dot_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/my_message_notice_tv"
+                android:contentDescription="@string/aboutus_content"
+                android:src="@drawable/point_red_notice"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_message_letter_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/my_message_letter_checked_bg"
+             >
+
+            <TextView
+                android:id="@+id/my_message_letter_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/private_letter"
+               	android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/new_green" />
+            <ImageView 
+                android:id="@+id/my_message_letter_dot_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/my_message_letter_tv"
+                android:contentDescription="@string/aboutus_content"
+                android:src="@drawable/point_red_notice"/>
+        </RelativeLayout>
+        <!--
+        <ImageView 
+                android:id="@+id/my_message_notice_dot_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="40dp"
+                android:contentDescription="@string/aboutus_content"
+                android:src="@drawable/point_red_notice"/>
+        <ImageView 
+                android:id="@+id/my_message_letter_dot_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="40dp"
+                android:contentDescription="@string/aboutus_content"
+                android:src="@drawable/point_red_notice"/>        -->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/title_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/selector_group_title_back"
+        android:onClick="onClick" />
+
+</RelativeLayout>

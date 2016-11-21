@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ac_paydilog_toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#20000000"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20000000"
+        android:orientation="vertical"
+        android:padding="4dp" >
+
+        <Button
+            android:id="@+id/ac_paydilog_cancelorder"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_solid"
+            android:gravity="center"
+            android:text="取消订单"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/ac_paydilog_ylpay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_solid"
+            android:gravity="center"
+            android:text="银联支付" />
+
+        <Button
+            android:id="@+id/ac_paydilog_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_solid"
+            android:gravity="center"
+            android:text="支付宝支付" />
+
+        <Button
+            android:id="@+id/ac_paydilog_weChatPay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="1dp"
+            android:visibility="gone"
+            android:background="@drawable/button_solid"
+            android:gravity="center"
+            android:text="微信支付" />
+
+        <Button
+            android:id="@+id/ac_paydilog_getpay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_solid"
+            android:gravity="center"
+            android:text="货到付款"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/ac_paydilog_exit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/button_solid"
+            android:gravity="center"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

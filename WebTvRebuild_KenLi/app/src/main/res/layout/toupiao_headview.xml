@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appsdk="http://www.app-sdk.com/schema"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.appsdk.advancedimageview.AdvancedImageCarousel
+        android:id="@+id/mCampaigndetailImageCarousel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:contentDescription="@null"
+        appsdk:aspectRatio="2.0"
+        appsdk:imageDefault="@drawable/default_thumbnail_news"
+        appsdk:imageError="@drawable/default_thumbnail_news"
+        appsdk:imageLoading="@drawable/default_thumbnail_news" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/shadow_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="8dp" >
+
+        <TextView
+            android:id="@+id/mCampaigndetailInfoTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#1f1f1f"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mCampaigndetailSummaryTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="40dp"
+            android:textColor="#838383"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/shadow_line" />
+
+        <TextView
+            android:id="@+id/mCampaigndetailTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawableLeft="@drawable/icon_bm_time"
+            android:gravity="center_vertical"
+            android:textColor="#838383"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/shadow_line" />
+
+        <TextView
+            android:id="@+id/mCampaigndetailSignUpSumTextView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawableLeft="@drawable/icon_bm_personnum"
+            android:gravity="center_vertical"
+            android:textColor="#838383"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/shadow_line" />
+
+        <TextView
+            android:id="@+id/mCampaigndetailAddressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawableLeft="@drawable/icon_bm_address"
+            android:gravity="center_vertical"
+            android:textColor="#838383"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/shadow_line" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mCampaigndetailSignUpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_margin="8dp"
+        android:background="@drawable/greenbutton"
+        android:gravity="center"
+        android:text="@string/campaign_offline_detail_sign_up"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/mCampaigndetailFinishBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_margin="10dip"
+        android:background="@drawable/campaign_offline_detail_sign_up_button"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/campaign_offline_detail_have_sign_up"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadow_line" />
+
+    <LinearLayout
+        android:id="@+id/mCampaigndetailTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:background="@color/white"
+        android:orientation="horizontal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadow_line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:text="参赛选手"
+        android:textColor="#1f1f1f"
+        android:textSize="18sp" />
+
+</LinearLayout>

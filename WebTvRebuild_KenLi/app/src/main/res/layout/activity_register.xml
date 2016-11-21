@@ -1,0 +1,885 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        custom:style="back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        custom:c_title="注册" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <!-- 注册布局样式 -->
+
+        <LinearLayout
+            android:id="@+id/ac_register_registerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="帐号"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/mLoginRegisterPhoneUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableBottom="@drawable/edit_normal_bg"
+                    android:gravity="bottom"
+                    android:hint="@string/login_username_hint"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true"
+                    android:textAppearance="@style/MyLoginLogonInputTextStyle"
+                    android:textColorHint="@color/login_text_hint_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="密码"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/mLoginRegisterPhonePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableBottom="@drawable/edit_normal_bg"
+                    android:gravity="bottom"
+                    android:hint="@string/login_password_hint"
+                    android:inputType="textPassword"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true"
+                    android:textAppearance="@style/MyLoginLogonInputTextStyle"
+                    android:textColorHint="@color/login_text_hint_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="昵称"
+                    android:textColor="@color/common_gray_text_color"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/mLoginRegister_nick_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableBottom="@drawable/edit_normal_bg"
+                    android:gravity="bottom"
+                    android:hint="请输入您的昵称"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true"
+                    android:textAppearance="@style/MyLoginLogonInputTextStyle"
+                    android:textColorHint="@color/login_text_hint_color" />
+            </LinearLayout>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="请注意，昵称设定之后不可修改！"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mLoginRegisterPhoneSubmitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="8dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/greenbutton"
+                android:clickable="true"
+                android:gravity="center"
+                android:inputType="none"
+                android:text="@string/login_register_submit"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" >
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:text="快捷登录"
+                    android:textColor="@color/grey" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dip"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/mLoginSinaWBLogon"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@null"
+                    android:drawableTop="@drawable/login_sinawb_icon"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/mLoginTencentWeiXinLogon"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@null"
+                    android:drawableTop="@drawable/login_weixin_icon"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/mLoginTencentWeiBo"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@null"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@drawable/share_tencentwb_icon"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/mLoginQQLogon"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:contentDescription="@null"
+                    android:drawableTop="@drawable/login_qq_icon"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+       
+    </LinearLayout>
+    <!-- 以下是之前的旧布局 才用的tabhost 全部隐藏掉 -->
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/mLoginBack_old"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_back_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/divider_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_above="@id/footer_layout"
+        android:background="@color/grey"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <TabHost
+        android:id="@+id/mTabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dip"
+        android:layout_marginTop="0dip"
+        android:visibility="gone" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:background="@drawable/login_tab_unselect"
+            android:tag="tabs" >
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_marginBottom="55dip"
+            android:layout_marginTop="60dip" >
+
+            <ScrollView
+                android:id="@+id/mLoginLogonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dip"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:layout_marginRight="20dip"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/login_social_logon"
+                            android:textAppearance="@style/MyLoginSocialLogonTextStyle"
+                            android:visibility="invisible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dip"
+                            android:visibility="visible" >
+
+                            <TextView
+                                android:id="@+id/mLoginSinaWBLogon_old"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:contentDescription="@null"
+                                android:drawablePadding="8dp"
+                                android:drawableTop="@drawable/share_sinawb_icon"
+                                android:gravity="center"
+                                android:text="新浪微博"
+                                android:textColor="#8d8d8d"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/mLoginTencentWeiXinLogon_old"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:contentDescription="@null"
+                                android:drawablePadding="8dp"
+                                android:drawableTop="@drawable/share_weixin_icon"
+                                android:gravity="center"
+                                android:text="微信"
+                                android:textColor="#8d8d8d"
+                                android:textSize="15sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/mLoginTencentWeiBo_old"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:contentDescription="@null"
+                                android:drawablePadding="8dp"
+                                android:drawableTop="@drawable/share_tencentwb_icon"
+                                android:gravity="center"
+                                android:text="腾讯微博"
+                                android:textColor="#8d8d8d"
+                                android:textSize="15sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/mLoginQQLogon_old"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:contentDescription="@null"
+                                android:drawablePadding="8dp"
+                                android:drawableTop="@drawable/share_qq_icon"
+                                android:gravity="center"
+                                android:text="QQ"
+                                android:textColor="#8d8d8d"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="25dip"
+                        android:layout_marginTop="15dip"
+                        android:contentDescription="@null"
+                        android:scaleType="center"
+                        android:src="@drawable/divider_dot"
+                        android:visibility="invisible" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:shrinkColumns="2"
+                        android:stretchColumns="2" >
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/greybox_round_top"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@null"
+                                android:paddingLeft="5dip"
+                                android:scaleType="center"
+                                android:src="@drawable/login_user_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="5dip"
+                                android:paddingRight="10dip"
+                                android:text="@string/login_username"
+                                android:textAppearance="@style/MyLoginLogonTextStyle" />
+
+                            <EditText
+                                android:id="@+id/mLoginLogonUsername_old"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="0dip"
+                                android:background="@color/transparent"
+                                android:gravity="center_vertical"
+                                android:hint="@string/login_username_hint"
+                                android:inputType="textEmailAddress"
+                                android:paddingLeft="0dip"
+                                android:paddingRight="5dip"
+                                android:singleLine="true"
+                                android:textAppearance="@style/MyLoginLogonInputTextStyle"
+                                android:textColorHint="@color/login_text_hint_color" >
+                            </EditText>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/greybox_round_bottom"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@null"
+                                android:paddingLeft="5dip"
+                                android:scaleType="center"
+                                android:src="@drawable/login_lock_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="5dip"
+                                android:paddingRight="10dip"
+                                android:text="@string/login_password"
+                                android:textAppearance="@style/MyLoginLogonTextStyle" />
+
+                            <EditText
+                                android:id="@+id/mLoginLogonPassword_old"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="0dip"
+                                android:background="@color/transparent"
+                                android:gravity="center_vertical"
+                                android:hint="@string/login_password_hint"
+                                android:inputType="textPassword"
+                                android:paddingLeft="0dip"
+                                android:paddingRight="5dip"
+                                android:singleLine="true"
+                                android:textAppearance="@style/MyLoginLogonInputTextStyle"
+                                android:textColorHint="@color/login_text_hint_color" >
+                            </EditText>
+                        </TableRow>
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/mLoginLogonSubmitBtn_old"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dip"
+                        android:layout_marginBottom="20dip"
+                        android:layout_marginTop="20dip"
+                        android:background="@drawable/greenbutton"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:text="@string/login_logon_submit"
+                        android:textAppearance="@style/MyRedButtonTextStyle" />
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/mLoginRegisterLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dip"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/mLoginRegisterPhoneLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dip"
+                            android:orientation="horizontal"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:text="手机号注册"
+                                android:textAppearance="@style/MyLoginSelectedTextStyle" />
+
+                            <TextView
+                                android:id="@+id/mLoginRegisterPhoneChange"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text="使用邮箱注册"
+                                android:textAppearance="@style/MyLoginUnselectedTextStyle"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:shrinkColumns="1"
+                            android:stretchColumns="1" >
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/greybox_bound"
+                                android:paddingBottom="10dip"
+                                android:paddingTop="10dip" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@null"
+                                    android:paddingLeft="5dip"
+                                    android:scaleType="center"
+                                    android:src="@drawable/login_user_icon" />
+
+                                <EditText
+                                    android:id="@+id/mLoginRegisterPhoneUsername_old"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="0dip"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/login_register_phone_hint"
+                                    android:inputType="phone"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="5dip"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/MyLoginLogonInputTextStyle" >
+                                </EditText>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_span="2"
+                                    android:gravity="center_vertical"
+                                    android:textAppearance="@style/MyLoginRegisterNoticeTextStyle" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/greybox_bound"
+                                android:paddingBottom="10dip"
+                                android:paddingTop="10dip" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@null"
+                                    android:paddingLeft="5dip"
+                                    android:scaleType="center"
+                                    android:src="@drawable/login_lock_icon" />
+
+                                <EditText
+                                    android:id="@+id/mLoginRegisterPhonePassword_old"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="0dip"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/login_register_password_hint"
+                                    android:inputType="textPassword"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="5dip"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/MyLoginLogonInputTextStyle" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_span="2"
+                                    android:gravity="center_vertical"
+                                    android:paddingBottom="10dip"
+                                    android:paddingTop="5dip"
+                                    android:text="@string/login_register_password_notice"
+                                    android:textAppearance="@style/MyLoginRegisterNoticeTextStyle" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/greybox_bound"
+                                android:paddingBottom="10dip"
+                                android:paddingTop="10dip" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@null"
+                                    android:paddingLeft="5dip"
+                                    android:scaleType="center"
+                                    android:src="@drawable/login_user_icon" />
+
+                                <EditText
+                                    android:id="@+id/mLoginRegister_nick_name_old"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="0dip"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:hint="请输入您的昵称"
+                                    android:inputType="text"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="5dip"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/MyLoginLogonInputTextStyle" >
+                                </EditText>
+                            </TableRow>
+                        </TableLayout>
+
+                        <TextView
+                            android:id="@+id/mLoginRegisterPhoneSubmitBtn_old"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dip"
+                            android:layout_marginBottom="20dip"
+                            android:layout_marginTop="20dip"
+                            android:background="@drawable/greenbutton"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:inputType="none"
+                            android:text="@string/login_register_submit"
+                            android:textAppearance="@style/MyRedButtonTextStyle" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="请注意，昵称设定之后不可修改！"
+                            android:textColor="@color/red"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mLoginRegisterEmailLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dip"
+                            android:orientation="horizontal"
+                            android:padding="5dip" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:text="邮箱注册"
+                                android:textAppearance="@style/MyLoginSelectedTextStyle" />
+
+                            <TextView
+                                android:id="@+id/mLoginRegisterEmailChange"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text="使用手机号注册"
+                                android:textAppearance="@style/MyLoginUnselectedTextStyle" />
+                        </LinearLayout>
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:shrinkColumns="1"
+                            android:stretchColumns="1" >
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/greybox_bound"
+                                android:paddingBottom="10dip"
+                                android:paddingTop="10dip" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@null"
+                                    android:paddingLeft="5dip"
+                                    android:scaleType="center"
+                                    android:src="@drawable/login_user_icon" />
+
+                                <EditText
+                                    android:id="@+id/mLoginRegisterEmailUsername"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="0dip"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/login_register_email_hint"
+                                    android:inputType="textEmailAddress"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="5dip"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/MyLoginLogonInputTextStyle" >
+                                </EditText>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_span="2"
+                                    android:gravity="center_vertical"
+                                    android:textAppearance="@style/MyLoginRegisterNoticeTextStyle" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/greybox_bound"
+                                android:paddingBottom="10dip"
+                                android:paddingTop="10dip" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@null"
+                                    android:paddingLeft="5dip"
+                                    android:scaleType="center"
+                                    android:src="@drawable/login_lock_icon" />
+
+                                <EditText
+                                    android:id="@+id/mLoginRegisterEmailPassword"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="0dip"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/login_register_password_hint"
+                                    android:inputType="textPassword"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="5dip"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/MyLoginLogonInputTextStyle" >
+                                </EditText>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_span="2"
+                                    android:gravity="center_vertical"
+                                    android:paddingBottom="10dip"
+                                    android:paddingTop="5dip"
+                                    android:text="@string/login_register_password_notice"
+                                    android:textAppearance="@style/MyLoginRegisterNoticeTextStyle" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/greybox_bound"
+                                android:paddingBottom="10dip"
+                                android:paddingTop="10dip" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:contentDescription="@null"
+                                    android:paddingLeft="5dip"
+                                    android:scaleType="center"
+                                    android:src="@drawable/login_user_icon" />
+
+                                <EditText
+                                    android:id="@+id/mLoginRegister_nickname_email"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="0dip"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:hint="请输入您的昵称"
+                                    android:inputType="text"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="5dip"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/MyLoginLogonInputTextStyle" >
+                                </EditText>
+                            </TableRow>
+                        </TableLayout>
+
+                        <TextView
+                            android:id="@+id/mLoginRegisterEmailSubmitBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dip"
+                            android:layout_marginBottom="20dip"
+                            android:layout_marginTop="20dip"
+                            android:background="@drawable/greenbutton"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:inputType="none"
+                            android:text="@string/login_register_submit"
+                            android:textAppearance="@style/MyRedButtonTextStyle" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </TabHost>
+
+</LinearLayout>

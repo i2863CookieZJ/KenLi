@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical" >
+
+    <com.sobey.cloud.webtv.widgets.CustomTitleView
+        android:id="@+id/ac_sendpj_header_ctv"
+        custom:style="back"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:padding="8dp" >
+
+        <ImageView
+            android:id="@+id/ac_sendpj_shopicon"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentLeft="true"
+            android:background="#ff0000"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/ac_sendpj_pingfen"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/ac_sendpj_shopicon"
+            android:gravity="center_vertical"
+            android:text="评分"
+            android:textColor="#1f1f1f"
+            android:textSize="16sp" />
+
+        <RatingBar
+            android:id="@+id/ac_sendpj_pingfenstar"
+            style="@style/roomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/ac_sendpj_pingfen"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/ac_sendpj_shopicon"
+            android:numStars="5"
+            android:rating="5" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/shadow_line" />
+
+    <EditText
+        android:id="@+id/ac_sendpj_comment"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#fff"
+        android:gravity="top"
+        android:hint="长度在1-500字之间\n写下商品的购买体会可以为其他小伙伴提供参考~"
+        android:maxLength="500"
+        android:minLines="2"
+        android:padding="8dp"
+        android:textColorHint="#838383"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/ac_sendpj_numberlimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="right"
+        android:padding="8dp"
+        android:text="0/500"
+        android:textColor="#838383" />
+
+    <Button
+        android:id="@+id/ac_sendpj_send"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/greenbutton"
+        android:gravity="center"
+        android:text="发表评价"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+</LinearLayout>

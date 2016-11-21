@@ -1,0 +1,227 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_videonews_detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/mplayerView"
+        android:layout_width="match_parent"
+        android:layout_height="240dip"
+        layout="@layout/controllerplaying" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/shadow_line"
+        android:orientation="vertical" />
+
+    <TabHost
+        android:id="@+id/mNewsdetailContentTab"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:background="@color/white"
+            android:tag="tabs" >
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_marginTop="40dip"
+            android:background="@color/white" >
+
+            <ScrollView
+                android:id="@+id/mDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dip" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/mNewsdetailContentTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="10dip"
+                        android:textAppearance="@style/MyVideoNewsDetailTitleTextStyle" />
+
+                    <LinearLayout
+                        android:id="@+id/newsdetail_content_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mNewsdetailContentTitle" >
+
+                        <TextView
+                            android:id="@+id/mNewsdetailContentDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:textAppearance="@style/MyVideoNewsDetailTipsTextStyle" />
+
+                        <TextView
+                            android:id="@+id/mNewsdetailContentRefername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="10dip"
+                            android:textAppearance="@style/MyVideoNewsDetailTipsTextStyle" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/newsdetail_content_divider"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/newsdetail_content_info"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:contentDescription="@null"
+                        android:src="@drawable/divider_middle" />
+
+                    <WebView
+                        android:id="@+id/mNewsdetailWebview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/newsdetail_content_divider" />
+                </RelativeLayout>
+            </ScrollView>
+
+            <ListView
+                android:id="@+id/mComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dip"
+                android:background="@color/white"
+                android:divider="@drawable/divider_middle"
+                android:scrollbars="none" />
+
+            <ScrollView
+                android:id="@+id/mRecommend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dip"
+                android:background="@color/white" >
+
+                <TableLayout
+                    android:id="@+id/mRecommendContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip"
+                    android:stretchColumns="0,1,2" >
+                </TableLayout>
+            </ScrollView>
+        </FrameLayout>
+    </TabHost>
+
+    <LinearLayout
+        android:id="@+id/mNewsdetailFooter"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/mNewsdetailBack"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_back_icon" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:paddingRight="5dip" >
+
+            <TextView
+                android:id="@+id/mNewsdetailLeavemessage"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="4"
+                android:background="@drawable/greybox_bound"
+                android:clickable="true"
+                android:gravity="center"
+                android:hint="@string/newsdetail_leavemessage"
+                android:inputType="none"
+                android:padding="5dip"
+                android:textAppearance="@style/MyGeneralNewsDetailFooterTextStyle" />
+
+            <ImageButton
+                android:id="@+id/mNewsdetailDownload"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:contentDescription="@null"
+                android:scaleType="center"
+                android:src="@drawable/newsdetail_download"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_footer_divider" />
+
+        <ImageButton
+            android:id="@+id/mNewsdetailShare"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_share_icon" />
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/newsdetail_footer_divider" />
+
+        <ImageButton
+            android:id="@+id/mNewsdetailMore"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:clickable="true"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/button_more_blank" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_home_list"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65.0dip"
+        android:orientation="horizontal" >
+
+        <com.sobey.cloud.webtv.ui.RoundImageView
+            android:id="@+id/item_myguanzhu_headicon"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_head" />
+
+        <TextView
+            android:id="@+id/item_myguanzhu_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8.0dip"
+            android:layout_toLeftOf="@+id/arrow_iv"
+            android:layout_toRightOf="@+id/item_myguanzhu_headicon"
+            android:singleLine="true"
+            android:text="关注的用户"
+            android:textColor="@color/common_gray_text_color"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:id="@+id/arrow_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/usercenter_arrow" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shadow_line" />
+
+</LinearLayout>

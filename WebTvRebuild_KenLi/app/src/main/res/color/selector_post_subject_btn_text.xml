@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="@color/red_for_group_2"  android:state_pressed="true"/>
+    <item android:color="@color/grey_group_for_des"  android:state_enabled="false"/>
+    <item android:color="@color/common_dark_gray_text_color" android:state_pressed="false"/>
+
+</selector>
